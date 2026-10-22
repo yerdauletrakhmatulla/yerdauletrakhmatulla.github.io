@@ -2,18 +2,37 @@
 # One list serves all three languages. Keep `title` in the item's original language
 # and set `lang` to that language (en, ru or kk).
 # type: interview | podcast | tv | feature
-# Newest first is not required; the page sorts by date.
+# start / stop (optional): where the segment starts and ends in a long programme.
+# The page sorts by date, newest first.
+
+- date: "2026-10-09"
+  type: tv
+  title: "Live commentary on the CIS summit in Turkmenistan"
+  outlet: "AnewZ"
+  url: "https://www.youtube.com/watch?v=EvsUCXZk_tE&t=2003s"
+  start: "33:23"
+  stop: "41:20"
+  lang: en
+
+- date: "2026-09-29"
+  type: tv
+  title: "Live commentary on President Tokayev's official visit to Germany"
+  outlet: "AnewZ"
+  url: "https://www.youtube.com/watch?v=zv8RjNDFXvA&t=2610s"
+  start: "43:30"
+  lang: en
+
+# CHECK: air date (the producer's LinkedIn post is dated 9 September 2026).
+- date: "2026-09-09"
+  type: interview
+  title: "The Central Asian Nuclear-Weapon-Free Zone at 20"
+  outlet: "AnewZ Prime Time"
+  url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503511376620068864/"
+  lang: en
 
 - date: "2025-09-25"
   type: feature
   title: "Kazakh activists shine a light on nuclear fallout"
   outlet: "Inkstick Media"
   url: "https://inkstickmedia.com/kazakh-activists-shine-a-light-on-nuclear-fallout/"
-  lang: en
-
-- date: "2023-07-06"
-  type: interview
-  title: "Interview with Yerdaulet Rakhmatulla"
-  outlet: "Wilson Center Digital Archive"
-  url: "https://digitalarchive.umd.edu/document/interview-yerdaulet-rakhmatulla"
   lang: en

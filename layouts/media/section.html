@@ -3,6 +3,7 @@
 {{- with .Content }}
 <div class="prose section-intro">{{ . }}</div>
 {{- end }}
+<p class="kit-jump"><a href="#media-kit">{{ i18n "kitJump" }}</a></p>
 {{- $items := sort (hugo.Data.media | default slice) "date" "desc" }}
 {{- if $items }}
 {{- $years := slice }}
@@ -18,7 +19,12 @@
       <time datetime="{{ $d.Format "2006-01-02" }}">{{ $d | time.Format ":date_medium" }}</time>
       <div class="post-item-body">
         <a class="post-title" href="{{ .url }}" rel="noopener" lang="{{ .lang }}" hreflang="{{ .lang }}">{{ .title }}</a>
-        <span class="post-cat">{{ .outlet }}, {{ i18n (printf "type_%s" .type) }}{{ if ne .lang site.Language.Lang }} ({{ i18n (printf "in_%s" .lang) }}){{ end }}</span>
+        <span class="post-cat">
+          {{- .outlet }}, {{ i18n (printf "type_%s" .type) }}
+          {{- with .start }}, {{ i18n "segment" }} {{ . }}{{ end }}
+          {{- if and .start .stop }}–{{ .stop }}{{ end }}
+          {{- if ne .lang site.Language.Lang }} ({{ i18n (printf "in_%s" .lang) }}){{ end -}}
+        </span>
       </div>
     </li>
     {{- end }}
@@ -29,4 +35,36 @@
 {{- else }}
 <p class="empty">{{ i18n "noMedia" }}</p>
 {{- end }}
+
+<section id="media-kit" class="media-kit" aria-labelledby="media-kit-h">
+  <h2 id="media-kit-h">{{ i18n "mediaKit" }}</h2>
+  <p class="section-intro">{{ i18n "mediaKitIntro" }}</p>
+  <dl class="kit">
+    <dt>{{ i18n "shortBio" }}</dt>
+    <dd>{{ .Params.kitBio }}</dd>
+
+    <dt>{{ i18n "nameLabel" }}</dt>
+    <dd>
+      <span lang="en">{{ site.Params.names.en }}</span> ({{ i18n "spell_en" }})<br>
+      <span lang="kk">{{ site.Params.names.kk }}</span> ({{ i18n "spell_kk" }})<br>
+      <span lang="ru">{{ site.Params.names.ru }}</span> ({{ i18n "spell_ru" }})
+      {{- if ne site.Language.Lang "kk" }}<br><a href="{{ site.Params.linkedin }}" rel="noopener">{{ i18n "pronounce" }}</a>{{ end }}
+    </dd>
+
+    <dt>{{ i18n "photoLabel" }}</dt>
+    <dd>
+      <img class="kit-photo" src="{{ "images/yerdaulet-rakhmatulla-320.jpg" | relURL }}" width="160" height="160" alt="{{ i18n "photoAlt" }}" loading="lazy">
+      <a href="{{ "images/yerdaulet-rakhmatulla-og.jpg" | relURL }}" download="yerdaulet-rakhmatulla.jpg">{{ i18n "downloadPhoto" }}</a>
+    </dd>
+
+    <dt>{{ i18n "topicsLabel" }}</dt>
+    <dd>{{ .Params.kitTopics }}</dd>
+
+    <dt>{{ i18n "languagesLabel" }}</dt>
+    <dd>{{ i18n "languagesValue" }}</dd>
+
+    <dt>{{ i18n "contact" }}</dt>
+    <dd><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></dd>
+  </dl>
+</section>
 {{ end }}

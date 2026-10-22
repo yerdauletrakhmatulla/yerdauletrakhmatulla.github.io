@@ -262,6 +262,16 @@ main > h1,
 .site-footer a { color: var(--muted); }
 .fine { margin: 0; }
 
+/* Media page */
+.kit-jump { margin: -0.5rem 0 0.5rem; font-size: 0.9375rem; }
+.media-kit { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); scroll-margin-top: 2rem; }
+.media-kit h2 { margin: 0 0 0.5rem; font-size: 1.25rem; font-weight: 500; }
+.kit { margin: 1.5rem 0 0; }
+.kit dt { margin: 1.5rem 0 0.25rem; color: var(--muted); font-size: 0.875rem; font-weight: 500; }
+.kit dt:first-child { margin-top: 0; }
+.kit dd { margin: 0; }
+.kit-photo { display: block; width: 10rem; height: auto; margin: 0.25rem 0 0.75rem; border-radius: 8px; }
+
 @media (max-width: 34rem) {
   .nameplate { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 2.5rem; }
   .portrait { width: 7rem; }

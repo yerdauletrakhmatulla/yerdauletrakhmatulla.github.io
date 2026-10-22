@@ -13,4 +13,4 @@ His policy work includes a [youth statement](https://www.iaea.org/sites/default/
 
 He holds a BA in International Public Management from Ludovika University of Public Service in Budapest, where he studied as a Stipendium Hungaricum scholar. He works in Kazakh, Russian and English.
 
-He is open to new roles and collaborations in nuclear policy, stakeholder engagement and international programmes. You can reach him [by email](mailto:yerdaulet.rakhmatulla@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/yerdaulet/).
+He is open to new roles and collaborations in nuclear policy, stakeholder engagement and international programmes. You can reach him [by email](mailto:salem@yerdauletrakhmatulla.com) or on [LinkedIn](https://www.linkedin.com/in/yerdaulet/).

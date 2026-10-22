@@ -10,7 +10,7 @@ buildDrafts = true
 
 [params]
   noindex = true
-  email = "yerdaulet.rakhmatulla@gmail.com"
+  email = "salem@yerdauletrakhmatulla.com"
   linkedin = "https://www.linkedin.com/in/yerdaulet/"
   [params.names]
     en = "Yerdaulet Rakhmatulla"
