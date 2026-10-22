@@ -43,7 +43,7 @@ The site starts in **review mode**: drafts are shown with a "Draft" badge, and s
 
 1. In `hugo.toml`, set `buildDrafts = false` and, under `[params]`, `noindex = false`.
 2. Set `draft: false` on each post you approve.
-3. Custom domain (after buying `yerdauletrakhmatulla.com`): in **Settings → Pages → Custom domain**, enter the domain, then add the DNS records GitHub shows at your registrar and tick **Enforce HTTPS**.
+3. Custom domain: `yerdauletrakhmatulla.com` (registered at Cloudflare, DNS only; verified in GitHub account settings). The site address lives in `baseURL` in `hugo.toml`.
 4. Add the site to Google Search Console and submit `/sitemap.xml`.
 
 ## Preview on your own computer (optional)
