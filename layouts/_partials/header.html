@@ -3,16 +3,18 @@
   <div class="site-menus">
     <nav class="site-nav" aria-label="{{ i18n "mainNav" }}">
       {{- $cur := . }}
-      {{- range slice "about" "posts" }}
+      {{- range slice "about" "posts" "media" }}
       {{- with site.GetPage . }}
       <a href="{{ .RelPermalink }}"{{ if or (eq $cur .) ($cur.IsDescendant .) }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a>
       {{- end }}
       {{- end }}
+      <a href="{{ site.Home.RelPermalink }}#contact">{{ i18n "contact" }}</a>
     </nav>
     <nav class="lang" aria-label="{{ i18n "language" }}">
       {{- range .AllTranslations }}
       <a href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}" lang="{{ .Language.Lang }}"{{ if eq .Language.Lang site.Language.Lang }} aria-current="true"{{ end }}>{{ .Language.Label }}</a>
       {{- end }}
     </nav>
+    <a class="social" href="{{ site.Params.linkedin }}" rel="me noopener">LinkedIn</a>
   </div>
 </header>

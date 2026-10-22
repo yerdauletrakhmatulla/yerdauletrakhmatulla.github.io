@@ -78,7 +78,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.wrap { max-width: 40rem; margin-inline: auto; padding-inline: 1.25rem; }
+/* The page frame is wide enough for a one-row header; reading content keeps a 40rem measure. */
+.wrap { max-width: 54rem; margin-inline: auto; padding-inline: 1.25rem; }
+main.wrap > * { max-width: 40rem; }
 
 a {
   color: var(--accent);
@@ -104,10 +106,10 @@ a:hover { text-decoration-thickness: 2px; }
   padding-block: 1.75rem;
 }
 .site-name { color: var(--ink); font-weight: 500; text-decoration: none; }
-.site-menus { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; font-size: 0.9375rem; }
-.site-nav, .lang { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
-.site-nav a, .lang a { color: var(--muted); text-decoration: none; }
-.site-nav a:hover, .lang a:hover { color: var(--ink); }
+.site-menus { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.75rem; font-size: 0.9375rem; }
+.site-nav, .lang { display: flex; flex-wrap: wrap; gap: 0.25rem 1.1rem; }
+.site-nav a, .lang a, .social { color: var(--muted); text-decoration: none; }
+.site-nav a:hover, .lang a:hover, .social:hover { color: var(--ink); }
 .site-nav a[aria-current], .lang a[aria-current] { color: var(--ink); font-weight: 500; }
 
 /* Home */
@@ -141,6 +143,14 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--muted);
   font-size: 1.125rem;
 }
+.pronounce { margin: 0.6rem 0 0; font-size: 0.875rem; }
+.pronounce a { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); }
+.pronounce a:hover { color: var(--ink); }
+.pronounce svg { flex: none; }
+.contact { margin-top: 4.5rem; scroll-margin-top: 2rem; }
+.contact h2 { margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 500; color: var(--muted); }
+.contact p { margin: 0 0 0.75rem; }
+.contact-email { font-size: 1.125rem; }
 .lead { max-width: 34em; margin: 2.25rem 0 1rem; font-size: 1.3125rem; line-height: 1.5; }
 .intro { margin: 0 0 1.5rem; }
 .home-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; }

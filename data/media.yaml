@@ -1,0 +1,19 @@
+# Media appearances: interviews, podcast episodes, TV commentary, features.
+# One list serves all three languages. Keep `title` in the item's original language
+# and set `lang` to that language (en, ru or kk).
+# type: interview | podcast | tv | feature
+# Newest first is not required; the page sorts by date.
+
+- date: "2025-09-25"
+  type: feature
+  title: "Kazakh activists shine a light on nuclear fallout"
+  outlet: "Inkstick Media"
+  url: "https://inkstickmedia.com/kazakh-activists-shine-a-light-on-nuclear-fallout/"
+  lang: en
+
+- date: "2023-07-06"
+  type: interview
+  title: "Interview with Yerdaulet Rakhmatulla"
+  outlet: "Wilson Center Digital Archive"
+  url: "https://digitalarchive.umd.edu/document/interview-yerdaulet-rakhmatulla"
+  lang: en

@@ -14,6 +14,11 @@
     {{- end }}
     {{- end }}
   </p>
+  {{- if ne site.Language.Lang "kk" }}
+  <p class="pronounce">
+    <a href="{{ site.Params.linkedin }}" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6"/><path d="M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>{{ i18n "pronounce" }}</a>
+  </p>
+  {{- end }}
   </div>
 </section>
 
@@ -21,7 +26,6 @@
 <p class="intro">{{ .Params.intro }}</p>
 <p class="home-links">
   {{- with site.GetPage "about" }}<a href="{{ .RelPermalink }}">{{ i18n "readBio" }}</a>{{ end }}
-  <a href="{{ site.Params.linkedin }}" rel="me">LinkedIn</a>
 </p>
 
 <section class="latest" aria-labelledby="latest">
@@ -37,5 +41,11 @@
   {{- else }}
   <p class="empty">{{ i18n "noPosts" }}</p>
   {{- end }}
+</section>
+
+<section id="contact" class="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h">{{ i18n "contact" }}</h2>
+  <p>{{ i18n "contactLead" }}</p>
+  <p class="contact-email"><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
 </section>
 {{ end }}

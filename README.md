@@ -9,6 +9,7 @@ Personal website of Yerdaulet Rakhmatulla in English, Russian and Kazakh. Built 
 | Home page text (headline, intro) | `content/<lang>/_index.md` |
 | Bio | `content/<lang>/about.md` |
 | Posts | `content/<lang>/posts/` |
+| Media list (interviews, podcasts, TV) | `data/media.yaml` (one list for all three languages) |
 | Menu and button labels | `i18n/en.toml`, `i18n/ru.toml`, `i18n/kk.toml` |
 | Name spellings, email, LinkedIn, launch switches | `hugo.toml` |
 | Design | `assets/css/main.css` (font: Google Sans, in `static/fonts/`) |
@@ -25,7 +26,7 @@ Personal website of Yerdaulet Rakhmatulla in English, Russian and Kazakh. Built 
    title: "Post title in this language"
    date: 2026-10-20          # for archive posts, the original date
    slug: bangkok-un-panel    # same Latin slug in all three files
-   categories: ["updates"]   # updates | archive | media
+   categories: ["updates"]   # updates | archive
    description: "One sentence for Google and link previews."
    source: "https://..."     # optional: link to the original
    sourceName: "UNODA"       # optional: name shown for the link

@@ -1,0 +1,32 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- with .Content }}
+<div class="prose section-intro">{{ . }}</div>
+{{- end }}
+{{- $items := sort (hugo.Data.media | default slice) "date" "desc" }}
+{{- if $items }}
+{{- $years := slice }}
+{{- range $items }}{{ $years = $years | append ((time.AsTime .date).Format "2006") }}{{ end }}
+{{- range $year := uniq $years }}
+<section class="year" aria-labelledby="m{{ $year }}">
+  <h2 id="m{{ $year }}">{{ $year }}</h2>
+  <ul class="post-list">
+    {{- range $items }}
+    {{- $d := time.AsTime .date }}
+    {{- if eq ($d.Format "2006") $year }}
+    <li class="post-item">
+      <time datetime="{{ $d.Format "2006-01-02" }}">{{ $d | time.Format ":date_medium" }}</time>
+      <div class="post-item-body">
+        <a class="post-title" href="{{ .url }}" rel="noopener" lang="{{ .lang }}" hreflang="{{ .lang }}">{{ .title }}</a>
+        <span class="post-cat">{{ .outlet }}, {{ i18n (printf "type_%s" .type) }}{{ if ne .lang site.Language.Lang }} ({{ i18n (printf "in_%s" .lang) }}){{ end }}</span>
+      </div>
+    </li>
+    {{- end }}
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{- else }}
+<p class="empty">{{ i18n "noMedia" }}</p>
+{{- end }}
+{{ end }}
