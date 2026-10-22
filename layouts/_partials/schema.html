@@ -1,0 +1,16 @@
+{{- $all := slice site.Params.names.en site.Params.names.kk site.Params.names.ru }}
+{{- $alt := complement (slice site.Title) $all }}
+{{- $person := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" site.Title
+  "alternateName" $alt
+  "url" site.Home.Permalink
+  "email" (printf "mailto:%s" site.Params.email)
+  "sameAs" (slice site.Params.linkedin)
+  "jobTitle" (i18n "jobTitle")
+  "worksFor" (dict "@type" "Organization" "name" "Nuclear Truth Project")
+  "alumniOf" (dict "@type" "CollegeOrUniversity" "name" "Ludovika University of Public Service")
+  "knowsLanguage" (slice "kk" "ru" "en")
+}}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>

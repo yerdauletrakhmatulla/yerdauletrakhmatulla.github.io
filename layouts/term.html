@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{- with site.GetPage "posts" }}
+<h1>{{ .Title }}</h1>
+{{- end }}
+{{ partial "post-filter.html" (dict "active" .Data.Term) }}
+{{ partial "post-years.html" .Pages }}
+{{ end }}

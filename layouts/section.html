@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- with .Content }}
+<div class="prose section-intro">{{ . }}</div>
+{{- end }}
+{{ partial "post-filter.html" (dict "active" "all") }}
+{{ partial "post-years.html" .Pages }}
+{{ end }}

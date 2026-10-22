@@ -1,0 +1,14 @@
+{{- if . }}
+{{- range .GroupByDate "2006" }}
+<section class="year" aria-labelledby="y{{ .Key }}">
+  <h2 id="y{{ .Key }}">{{ .Key }}</h2>
+  <ul class="post-list">
+    {{- range .Pages }}
+    {{ partial "post-item.html" . }}
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{- else }}
+<p class="empty">{{ i18n "noPosts" }}</p>
+{{- end }}

@@ -1,0 +1,44 @@
+baseURL = "https://yerdauletrakhmatulla.github.io/"
+title = "Yerdaulet Rakhmatulla"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+
+# REVIEW MODE: drafts are built and search engines are asked not to index the site.
+# AT LAUNCH: set buildDrafts = false here, and noindex = false under [params].
+buildDrafts = true
+
+[params]
+  noindex = true
+  email = "yerdaulet.rakhmatulla@gmail.com"
+  linkedin = "https://www.linkedin.com/in/yerdaulet/"
+  [params.names]
+    en = "Yerdaulet Rakhmatulla"
+    kk = "Ердәулет Рахматулла"
+    ru = "Ердаулет Рахматулла"
+
+[taxonomies]
+  category = "categories"
+
+[permalinks.page]
+  posts = "/posts/:slug/"
+
+[languages]
+  [languages.en]
+    label = "English"
+    locale = "en-GB"
+    weight = 1
+    contentDir = "content/en"
+    title = "Yerdaulet Rakhmatulla"
+  [languages.ru]
+    label = "Русский"
+    locale = "ru"
+    weight = 2
+    contentDir = "content/ru"
+    title = "Ердаулет Рахматулла"
+  [languages.kk]
+    label = "Қазақша"
+    locale = "kk"
+    weight = 3
+    contentDir = "content/kk"
+    title = "Ердәулет Рахматулла"

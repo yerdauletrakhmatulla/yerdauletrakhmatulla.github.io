@@ -1,0 +1,35 @@
+{{ define "main" }}
+<section class="nameplate" aria-labelledby="name">
+  <h1 id="name">{{ site.Title }}</h1>
+  <p class="alt-names">
+    {{- range $lang := slice "en" "kk" "ru" }}
+    {{- $n := index site.Params.names $lang }}
+    {{- if and (ne $lang site.Language.Lang) (ne $n site.Title) }}
+    <span lang="{{ $lang }}">{{ $n }}</span>
+    {{- end }}
+    {{- end }}
+  </p>
+</section>
+
+<p class="lead">{{ .Params.headline }}</p>
+<p class="intro">{{ .Params.intro }}</p>
+<p class="home-links">
+  {{- with site.GetPage "about" }}<a href="{{ .RelPermalink }}">{{ i18n "readBio" }}</a>{{ end }}
+  <a href="{{ site.Params.linkedin }}" rel="me">LinkedIn</a>
+</p>
+
+<section class="latest" aria-labelledby="latest">
+  <h2 id="latest">{{ i18n "latest" }}</h2>
+  {{- $posts := where site.RegularPages "Section" "posts" }}
+  {{- with first 3 $posts }}
+  <ul class="post-list">
+    {{- range . }}
+    {{ partial "post-item.html" . }}
+    {{- end }}
+  </ul>
+  {{- with site.GetPage "posts" }}<p class="more"><a href="{{ .RelPermalink }}">{{ i18n "allPosts" }}</a></p>{{ end }}
+  {{- else }}
+  <p class="empty">{{ i18n "noPosts" }}</p>
+  {{- end }}
+</section>
+{{ end }}

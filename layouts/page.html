@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{- $isPost := eq .Section "posts" }}
+<article class="{{ if $isPost }}post{{ else }}page{{ end }}">
+  {{- if $isPost }}
+  <p class="post-meta">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+    {{- with .Params.categories }}{{ $c := index . 0 }}{{ with site.GetPage (printf "/categories/%s" $c) }}
+    <a href="{{ .RelPermalink }}">{{ i18n (printf "cat_%s" $c) }}</a>
+    {{- end }}{{ end }}
+  </p>
+  {{- end }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Draft }}
+  <p class="draft-note">{{ i18n "draft" }}</p>
+  {{- end }}
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  {{- with .Params.source }}
+  <p class="source">{{ i18n "source" }}: <a href="{{ . }}" rel="noopener">{{ $.Params.sourceName | default . }}</a></p>
+  {{- end }}
+  {{- if $isPost }}{{ with site.GetPage "posts" }}
+  <p class="back"><a href="{{ .RelPermalink }}">{{ i18n "backToPosts" }}</a></p>
+  {{- end }}{{ end }}
+</article>
+{{ end }}

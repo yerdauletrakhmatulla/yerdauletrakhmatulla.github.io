@@ -1,0 +1,11 @@
+{{- $active := .active }}
+<nav class="filter" aria-label="{{ i18n "filterLabel" }}">
+  {{- with site.GetPage "posts" }}
+  <a href="{{ .RelPermalink }}"{{ if eq $active "all" }} aria-current="page"{{ end }}>{{ i18n "all" }}</a>
+  {{- end }}
+  {{- range $k := slice "updates" "archive" "media" }}
+  {{- with site.GetPage (printf "/categories/%s" $k) }}
+  <a href="{{ .RelPermalink }}"{{ if eq $active $k }} aria-current="page"{{ end }}>{{ i18n (printf "cat_%s" $k) }}</a>
+  {{- end }}
+  {{- end }}
+</nav>

@@ -1,0 +1,10 @@
+<li class="post-item">
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+  <div class="post-item-body">
+    <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="post-cat">
+      {{- with .Params.categories }}{{ i18n (printf "cat_%s" (index . 0)) }}{{ end }}
+      {{- if .Draft }} <span class="badge">{{ i18n "draftShort" }}</span>{{ end -}}
+    </span>
+  </div>
+</li>

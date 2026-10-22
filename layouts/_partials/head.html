@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $name := site.Title }}
+{{- $pageTitle := .Title }}
+{{- if eq .Kind "term" }}{{ $pageTitle = i18n (printf "cat_%s" .Data.Term) }}{{ end }}
+{{- $title := printf "%s | %s" $pageTitle $name }}
+{{- if .IsHome }}{{ $title = printf "%s | %s" $name (i18n "titleTagline") }}{{ end }}
+{{- $desc := .Description }}
+{{- if not $desc }}{{ $desc = .Params.headline }}{{ end }}
+{{- if not $desc }}{{ $desc = .Summary | plainify | truncate 160 }}{{ end }}
+{{- if not $desc }}{{ $desc = i18n "titleTagline" }}{{ end }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+{{- if site.Params.noindex }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range where .AllTranslations "Language.Lang" "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ $name }}">
+<meta property="og:locale" content="{{ i18n "ogLocale" }}">
+{{- if and .IsPage (eq .Section "posts") }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+{{- end }}
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141618" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml">
+{{- $font := "google-sans-cyrillic-wght-normal.woff2" }}
+{{- if eq site.Language.Lang "en" }}{{ $font = "google-sans-latin-wght-normal.woff2" }}{{ end }}
+<link rel="preload" href="{{ printf "fonts/%s" $font | absURL }}" as="font" type="font/woff2" crossorigin>
+{{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- if or .IsHome (and .File (eq .File.ContentBaseName "about")) }}
+{{ partial "schema.html" . }}
+{{- end }}
