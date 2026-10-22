@@ -33,7 +33,7 @@ Personal website of Yerdaulet Rakhmatulla in English, Russian and Kazakh. Built 
    ---
    ```
 
-3. Write the text below the second `---`. To embed a YouTube video, put `{{< youtube VIDEO_ID >}}` on its own line.
+3. Write the text below the second `---`, in the third person like the About page ("Yerdaulet Rakhmatulla presented…", then "he"). To embed a YouTube video, put `{{< youtube VIDEO_ID >}}` on its own line.
 4. Commit to `main`. The site updates once the Actions run turns green.
 
 ## Launch checklist

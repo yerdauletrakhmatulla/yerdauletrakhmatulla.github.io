@@ -111,7 +111,21 @@ a:hover { text-decoration-thickness: 2px; }
 .site-nav a[aria-current], .lang a[aria-current] { color: var(--ink); font-weight: 500; }
 
 /* Home */
-.nameplate { margin-top: 4.5rem; }
+.nameplate {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  align-items: center;
+  gap: 1.75rem;
+  margin-top: 4.5rem;
+}
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
 .nameplate h1 {
   margin: 0;
   font-size: clamp(2.25rem, 6.5vw, 3.25rem);
@@ -239,7 +253,8 @@ main > h1,
 .fine { margin: 0; }
 
 @media (max-width: 34rem) {
-  .nameplate { margin-top: 3rem; }
+  .nameplate { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 2.5rem; }
+  .portrait { width: 7rem; }
   .lead { font-size: 1.1875rem; }
   .post-item { grid-template-columns: 1fr; gap: 0.15rem; }
 }

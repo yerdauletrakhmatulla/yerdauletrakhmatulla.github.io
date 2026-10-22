@@ -1,5 +1,10 @@
 {{ define "main" }}
 <section class="nameplate" aria-labelledby="name">
+  <picture class="portrait">
+    <source type="image/webp" srcset="{{ "images/yerdaulet-rakhmatulla-320.webp" | relURL }} 320w, {{ "images/yerdaulet-rakhmatulla-640.webp" | relURL }} 640w" sizes="(max-width: 34rem) 7rem, 9.5rem">
+    <img src="{{ "images/yerdaulet-rakhmatulla-640.jpg" | relURL }}" srcset="{{ "images/yerdaulet-rakhmatulla-320.jpg" | relURL }} 320w, {{ "images/yerdaulet-rakhmatulla-640.jpg" | relURL }} 640w" sizes="(max-width: 34rem) 7rem, 9.5rem" width="640" height="640" alt="{{ i18n "photoAlt" }}" fetchpriority="high">
+  </picture>
+  <div class="names">
   <h1 id="name">{{ site.Title }}</h1>
   <p class="alt-names">
     {{- range $lang := slice "en" "kk" "ru" }}
@@ -9,6 +14,7 @@
     {{- end }}
     {{- end }}
   </p>
+  </div>
 </section>
 
 <p class="lead">{{ .Params.headline }}</p>
