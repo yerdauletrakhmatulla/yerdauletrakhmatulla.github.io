@@ -1,7 +1,8 @@
-# Media appearances: interviews, podcast episodes, TV commentary, features.
+# Media appearances: interviews, podcast episodes, TV commentary, videos, press features.
 # One list serves all three languages. Keep `title` in the item's original language
 # and set `lang` to that language (en, ru or kk).
-# type: interview | podcast | tv | feature
+# type: interview | podcast | tv | video | feature
+#   feature = press coverage that quotes or profiles him (not a one-on-one interview)
 # start / stop (optional): where the segment starts and ends in a long programme.
 # The page sorts by date, newest first.
 
@@ -22,12 +23,12 @@
   start: "43:30"
   lang: en
 
-# CHECK: air date (the producer's LinkedIn post is dated 9 September 2026).
+# CHECK: air date (the producer's LinkedIn post is dated 9 September 2026, yours 11 September).
 - date: "2026-09-09"
   type: interview
   title: "The Central Asian Nuclear-Weapon-Free Zone at 20"
   outlet: "AnewZ Prime Time"
-  url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503511376620068864/"
+  url: "https://www.linkedin.com/posts/yerdaulet_primetime-nuclearweaponfreezone-ugcPost-7504132932496891904-kYts/"
   lang: en
 
 - date: "2025-09-25"
@@ -35,4 +36,74 @@
   title: "Kazakh activists shine a light on nuclear fallout"
   outlet: "Inkstick Media"
   url: "https://inkstickmedia.com/kazakh-activists-shine-a-light-on-nuclear-fallout/"
+  lang: en
+
+- date: "2025-08-29"
+  type: feature
+  title: "Kazakhstan's Legacy, Global Voices Mark International Day Against Nuclear Tests"
+  outlet: "The Astana Times"
+  url: "https://astanatimes.com/2025/08/kazakhstans-legacy-global-voices-mark-international-day-against-nuclear-tests/"
+  lang: en
+
+- date: "2025-04-23"
+  type: interview
+  title: "«Молодежь, стремящаяся изменить мир, никогда не бывает одна»: интервью с Рахматулла Ердаулетом"
+  outlet: "QazVolunteer"
+  url: "https://qazvolunteer.kz/ru/articles/molodezh-stremyashchayasya-izmenit-mir-nikogda-ne-byvaet-odna-intervyu-s-rakhmatulla-erdauletom"
+  lang: ru
+
+- date: "2025-03-11"
+  type: feature
+  title: "Youth-Led Kazakh Movement Demands Action on Nuclear Legacy at UN"
+  outlet: "The Astana Times"
+  url: "https://astanatimes.com/2025/03/exclusive-youth-led-kazakh-movement-demands-action-on-nuclear-legacy-at-un/"
+  lang: en
+
+- date: "2025-03-08"
+  type: feature
+  title: "Kazakh Youth Find Their Voice for Nuclear Justice at the UN"
+  outlet: "The Diplomat"
+  url: "https://thediplomat.com/2025/03/kazakh-youth-find-their-voice-for-nuclear-justice-at-the-un/"
+  lang: en
+
+- date: "2024-09-26"
+  type: podcast
+  title: "Young Qazaqs' mission to turn nuclear testing legacy into disarmament (episode 15)"
+  outlet: "Atombombspodden"
+  url: "https://podcasts.apple.com/us/podcast/15-young-qazaqs-mission-to-turn-nuclear-testing-legacy/id1337832275?i=1000670752297"
+  lang: en
+
+- date: "2024-09-05"
+  type: feature
+  title: "Youth Activists Gather in Astana, Channel Expertise, Influence for World Free of Nuclear Weapons"
+  outlet: "The Astana Times"
+  url: "https://astanatimes.com/2024/09/youth-activists-gather-in-astana-channel-expertise-influence-for-world-free-of-nuclear-weapons/"
+  lang: en
+
+- date: "2024-08-29"
+  type: video
+  title: "To Survive is to Resist"
+  outlet: "IPPNW Germany"
+  url: "https://www.youtube.com/watch?v=A8oqAqy8oS8"
+  lang: en
+
+- date: "2024-07-29"
+  type: feature
+  title: "Young Changemakers Advocate for Nuclear-Free Future through Educational Journey in Kazakhstan"
+  outlet: "The Astana Times"
+  url: "https://astanatimes.com/2024/07/young-changemakers-advocate-for-nuclear-free-future-through-educational-journey-in-kazakhstan/"
+  lang: en
+
+- date: "2022-03-22"
+  type: feature
+  title: "Как молодежь преодолевает разрыв в цифровых знаниях с помощью курса по ИИ и правам человека"
+  outlet: "UNESCO"
+  url: "https://www.unesco.org/ru/articles/kak-molodezh-preodolevaet-razryv-v-cifrovykh-znaniyakh-s-pomoschyu-kursa-po-ii-i-pravam-cheloveka"
+  lang: ru
+
+- date: "2020-12-09"
+  type: feature
+  title: "Kazakhstan Marks International Volunteer Day"
+  outlet: "The Astana Times"
+  url: "https://astanatimes.com/2020/12/kazakhstan-marks-international-volunteer-day/"
   lang: en
