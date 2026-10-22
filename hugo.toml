@@ -27,18 +27,18 @@ buildDrafts = true
   [languages.en]
     label = "English"
     locale = "en-GB"
-    weight = 1
+    weight = 2
     contentDir = "content/en"
     title = "Yerdaulet Rakhmatulla"
   [languages.ru]
     label = "Русский"
     locale = "ru"
-    weight = 2
+    weight = 3
     contentDir = "content/ru"
     title = "Ердаулет Рахматулла"
   [languages.kk]
     label = "Қазақша"
     locale = "kk"
-    weight = 3
+    weight = 1
     contentDir = "content/kk"
     title = "Ердәулет Рахматулла"
