@@ -40,7 +40,13 @@ jobs:
           key: hugo-cache-${{ github.run_id }}
           restore-keys: hugo-cache-
       - name: Build
-        run: hugo --minify --logLevel info
+        run: |
+          set -o pipefail
+          hugo --minify 2>&1 | tee "${{ runner.temp }}/build.log"
+      - name: Report link previews
+        run: |
+          grep -o 'preview: .*' "${{ runner.temp }}/build.log" | cut -c1-200 | sed 's/^/::warning title=Link preview::/' || true
+          echo "::notice title=Link previews::$(find public -name '*_hu_*.webp' | wc -l) preview images built"
       - name: Upload
         uses: actions/upload-pages-artifact@v5
         with:
