@@ -7,6 +7,7 @@ categories: ["archive"]
 description: "A needs-based assessment of nuclear-affected communities in Kazakhstan, co-authored by Yerdaulet Rakhmatulla and Aigerim Seitenova and published by the Qazaq Nuclear Frontline Coalition with support from ICAN."
 source: "https://qazaqnuclearfrontlinecoalition.com/from-harm-to-justice"
 sourceName: "Qazaq Nuclear Frontline Coalition"
+sourceImage: "https://thb.tildacdn.pro/tild6436-3864-4237-a362-363663653437/-/resize/504x/Screenshot_2026-06-2.png"
 sourceTitle: "From Harm to Justice (policy paper)"
 draft: true
 ---

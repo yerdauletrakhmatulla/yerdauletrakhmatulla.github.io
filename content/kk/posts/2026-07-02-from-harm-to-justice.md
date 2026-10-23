@@ -7,6 +7,7 @@ categories: ["archive"]
 description: "Қазақстандағы ядролық сынақтардан зардап шеккен қауымдастықтардың қажеттіліктерін бағалау. Авторлары: Ердәулет Рахматулла мен Айгерім Сейтенова; ICAN қолдауымен Qazaq Nuclear Frontline Coalition жариялады."
 source: "https://qazaqnuclearfrontlinecoalition.com/from-harm-to-justice"
 sourceName: "Qazaq Nuclear Frontline Coalition"
+sourceImage: "https://thb.tildacdn.pro/tild6436-3864-4237-a362-363663653437/-/resize/504x/Screenshot_2026-06-2.png"
 sourceTitle: "From Harm to Justice (саяси баяндама)"
 draft: true
 ---

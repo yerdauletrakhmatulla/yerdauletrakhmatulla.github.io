@@ -8,6 +8,7 @@ categories: ["archive"]
 description: "В Международный день действий против ядерных испытаний 2024 года молодёжь из Казахстана, Кирибати и Маршалловых Островов приняла в Астане декларацию из 12 пунктов."
 source: "https://astanatimes.com/2024/09/youth-activists-gather-in-astana-channel-expertise-influence-for-world-free-of-nuclear-weapons/"
 sourceName: "The Astana Times"
+sourceImage: "https://astanatimes.com/wp-content/uploads/2024/09/38c8c641-0bd2-449a-8d1a-776f5a165da4.jpeg"
 sourceTitle: "Youth Activists Gather in Astana, Channel Expertise, Influence for World Free of Nuclear Weapons"
 draft: true
 ---

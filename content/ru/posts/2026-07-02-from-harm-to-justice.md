@@ -7,6 +7,7 @@ categories: ["archive"]
 description: "Оценка потребностей сообществ Казахстана, пострадавших от ядерных испытаний. Авторы: Ердаулет Рахматулла и Айгерим Сейтенова; издатель: Qazaq Nuclear Frontline Coalition при поддержке ICAN."
 source: "https://qazaqnuclearfrontlinecoalition.com/from-harm-to-justice"
 sourceName: "Qazaq Nuclear Frontline Coalition"
+sourceImage: "https://thb.tildacdn.pro/tild6436-3864-4237-a362-363663653437/-/resize/504x/Screenshot_2026-06-2.png"
 sourceTitle: "From Harm to Justice (аналитический доклад)"
 draft: true
 ---
