@@ -7,6 +7,7 @@ categories: ["archive"]
 description: "Недельная учебная поездка по Астане, Алматы и Семею для 20 молодых людей из Казахстана и Германии, организованная совместно с ФФЭ в Казахстане, ICAN Germany и STOP."
 source: "https://astanatimes.com/2024/07/young-changemakers-advocate-for-nuclear-free-future-through-educational-journey-in-kazakhstan/"
 sourceName: "The Astana Times"
+sourceTitle: "Young Changemakers Advocate for Nuclear-Free Future through Educational Journey in Kazakhstan"
 draft: true
 ---
 

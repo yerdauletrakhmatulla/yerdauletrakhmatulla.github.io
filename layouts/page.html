@@ -17,7 +17,10 @@
     {{ .Content }}
   </div>
   {{- with .Params.source }}
-  <p class="source">{{ i18n "source" }}: <a href="{{ . }}" rel="noopener">{{ $.Params.sourceName | default . }}</a></p>
+  <section class="source" aria-label="{{ i18n "source" }}">
+    <p class="source-label">{{ i18n "source" }}</p>
+    {{ partial "preview-card.html" (dict "page" $ "url" . "title" ($.Params.sourceTitle | default $.Params.sourceName) "site" $.Params.sourceName "image" ($.Params.sourceImage | default "")) }}
+  </section>
   {{- end }}
   {{- if $isPost }}{{ with site.GetPage "posts" }}
   <p class="back"><a href="{{ .RelPermalink }}">{{ i18n "backToPosts" }}</a></p>

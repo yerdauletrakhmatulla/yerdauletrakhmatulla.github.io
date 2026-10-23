@@ -1,0 +1,62 @@
+{{- /*
+  Works out a preview for a link. Returns a dict:
+    url, host, img (a processed image resource, or false), yt (YouTube video id or ""), start (seconds)
+  Input: dict "url" "<link>" and optionally "image" "<image url>" to override the page's own preview image.
+  Images are fetched when the site is built (never from visitors' browsers) and resized to 640x360.
+*/ -}}
+{{- $url := .url -}}
+{{- $src := .image | default "" -}}
+{{- $ua := "Mozilla/5.0 (compatible; LinkPreview/1.0; +https://yerdauletrakhmatulla.com)" -}}
+{{- $u := urls.Parse $url -}}
+{{- $host := strings.TrimPrefix "www." $u.Host -}}
+
+{{- /* YouTube: thumbnail and start time come from the link itself. */ -}}
+{{- $yt := "" -}}
+{{- with findRESubmatch `(?:youtube\.com/watch\?(?:[^#]*&)?v=|youtu\.be/)([A-Za-z0-9_-]{11})` $url 1 -}}
+  {{- $yt = index (index . 0) 1 -}}
+{{- end -}}
+{{- $start := 0 -}}
+{{- with $yt -}}
+  {{- with findRE `^\d+` ($u.Query.Get "t") 1 -}}{{- $start = int (index . 0) -}}{{- end -}}
+  {{- if not $src -}}{{- $src = printf "https://i.ytimg.com/vi/%s/hqdefault.jpg" $yt -}}{{- end -}}
+{{- end -}}
+
+{{- /* Other pages: read the page's own preview image (og:image), as social networks do. PDFs have none. */ -}}
+{{- $isPDF := strings.HasSuffix (lower $u.Path) ".pdf" -}}
+{{- if and (not $src) (not $isPDF) -}}
+  {{- with try (resources.GetRemote $url (dict "headers" (dict "User-Agent" $ua))) -}}
+    {{- with .Err -}}
+      {{- warnf "preview: page not fetched, %s (%s)" $url . -}}
+    {{- else with .Value -}}
+      {{- $html := .Content -}}
+      {{- $m := findRESubmatch `<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*content=["']([^"']+)["']` $html 1 -}}
+      {{- if not $m -}}
+        {{- $m = findRESubmatch `<meta[^>]+content=["']([^"']+)["'][^>]*(?:property|name)=["'](?:og:image|twitter:image)["']` $html 1 -}}
+      {{- end -}}
+      {{- with $m -}}{{- $src = index (index . 0) 1 | htmlUnescape -}}{{- end -}}
+      {{- if not $src -}}{{- warnf "preview: no preview image on %s" $url -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if strings.HasPrefix $src "//" -}}{{- $src = printf "https:%s" $src -}}
+{{- else if strings.HasPrefix $src "/" -}}{{- $src = printf "%s://%s%s" $u.Scheme $u.Host $src -}}{{- end -}}
+
+{{- /* Fetch and resize the image. */ -}}
+{{- $img := false -}}
+{{- with $src -}}
+  {{- with try (resources.GetRemote . (dict "headers" (dict "User-Agent" $ua))) -}}
+    {{- with .Err -}}
+      {{- warnf "preview: image not fetched, %s (%s)" $src . -}}
+    {{- else with .Value -}}
+      {{- if and (eq .ResourceType "image") (in (slice "jpeg" "png" "webp" "gif") .MediaType.SubType) -}}
+        {{- with try (.Fill "640x360 Center webp q75") -}}
+          {{- with .Err -}}{{- warnf "preview: image not processed, %s (%s)" $src . -}}{{- else -}}{{- $img = .Value -}}{{- end -}}
+        {{- end -}}
+      {{- else -}}
+        {{- warnf "preview: unusable image type at %s" $src -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict "url" $url "host" $host "img" $img "yt" $yt "start" $start) -}}

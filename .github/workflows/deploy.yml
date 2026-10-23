@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.168.0
+      HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
     steps:
       - name: Install Hugo
         run: |
@@ -29,8 +30,16 @@ jobs:
       - name: Set up Pages
         id: pages
         uses: actions/configure-pages@v6
+      # Keeps link-preview images between builds, so a site that is briefly down
+      # or blocks the build server does not lose its preview.
+      - name: Restore preview cache
+        uses: actions/cache@v6
+        with:
+          path: ${{ runner.temp }}/hugo_cache
+          key: hugo-cache-${{ github.run_id }}
+          restore-keys: hugo-cache-
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --logLevel info
       - name: Upload
         uses: actions/upload-pages-artifact@v5
         with:

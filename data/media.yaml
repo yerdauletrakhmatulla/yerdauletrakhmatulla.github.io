@@ -23,7 +23,6 @@
   start: "43:30"
   lang: en
 
-# CHECK: air date (the producer's LinkedIn post is dated 9 September 2026, yours 11 September).
 - date: "2026-09-09"
   type: interview
   title: "The Central Asian Nuclear-Weapon-Free Zone at 20"

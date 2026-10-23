@@ -7,6 +7,7 @@ categories: ["archive"]
 description: "Қазақстан мен Германиядан келген 20 жасқа арналған Астана, Алматы және Семей бойынша бір апталық оқу сапары. ФЭҚ Қазақстан, ICAN Germany және STOP-пен бірге ұйымдастырылды."
 source: "https://astanatimes.com/2024/07/young-changemakers-advocate-for-nuclear-free-future-through-educational-journey-in-kazakhstan/"
 sourceName: "The Astana Times"
+sourceTitle: "Young Changemakers Advocate for Nuclear-Free Future through Educational Journey in Kazakhstan"
 draft: true
 ---
 

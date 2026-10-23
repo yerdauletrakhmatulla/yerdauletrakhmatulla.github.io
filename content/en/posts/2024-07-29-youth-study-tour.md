@@ -7,6 +7,7 @@ categories: ["archive"]
 description: "A week-long study tour through Astana, Almaty and Semey for 20 young people from Kazakhstan and Germany, co-organised with FES Kazakhstan, ICAN Germany and STOP."
 source: "https://astanatimes.com/2024/07/young-changemakers-advocate-for-nuclear-free-future-through-educational-journey-in-kazakhstan/"
 sourceName: "The Astana Times"
+sourceTitle: "Young Changemakers Advocate for Nuclear-Free Future through Educational Journey in Kazakhstan"
 draft: true
 ---
 

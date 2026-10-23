@@ -3,7 +3,7 @@
   <div class="site-menus">
     <nav class="site-nav" aria-label="{{ i18n "mainNav" }}">
       {{- $cur := . }}
-      {{- range slice "about" "posts" "media" }}
+      {{- range slice "about" "posts" "publications" "media" }}
       {{- with site.GetPage . }}
       <a href="{{ .RelPermalink }}"{{ if or (eq $cur .) ($cur.IsDescendant .) }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a>
       {{- end }}

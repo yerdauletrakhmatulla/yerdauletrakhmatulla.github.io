@@ -10,6 +10,7 @@ Personal website of Yerdaulet Rakhmatulla in English, Russian and Kazakh. Built 
 | Bio | `content/<lang>/about.md` |
 | Posts | `content/<lang>/posts/` |
 | Media list (interviews, podcasts, TV) | `data/media.yaml` (one list for all three languages) |
+| Publications (reports, papers, articles, statements, talks) | `data/publications.yaml` (one list for all three languages) |
 | Menu and button labels | `i18n/en.toml`, `i18n/ru.toml`, `i18n/kk.toml` |
 | Name spellings, email, LinkedIn, launch switches | `hugo.toml` |
 | Design | `assets/css/main.css` (font: Google Sans, in `static/fonts/`) |
@@ -34,7 +35,13 @@ Personal website of Yerdaulet Rakhmatulla in English, Russian and Kazakh. Built 
    ---
    ```
 
-3. Write the text below the second `---`, in the third person like the About page ("Yerdaulet Rakhmatulla presented…", then "he"). To embed a YouTube video, put `{{< youtube VIDEO_ID >}}` on its own line.
+3. Write the text below the second `---`, in the third person like the About page ("Yerdaulet Rakhmatulla presented…", then "he"). To show a preview of a video or article, put this on its own line:
+
+   ```
+   {{< preview url="https://..." title="Title" site="Outlet" >}}
+   ```
+
+   YouTube links become a player that loads YouTube only when the reader presses play (a `&t=123s` in the link sets the start time). Other links become a card with the page's own preview image. Images are fetched when the site is built; add `image="https://..."` to choose a different one. The `source` link in the header gets the same card at the end of the post.
 4. Commit to `main`. The site updates once the Actions run turns green.
 
 ## Launch checklist

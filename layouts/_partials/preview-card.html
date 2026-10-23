@@ -1,0 +1,27 @@
+{{- /*
+  A preview card for posts. Input: dict "page" .Page "url" "title" "site" and optional "image".
+  YouTube links become a player that loads YouTube only when the reader presses play.
+*/ -}}
+{{- $p := partialCached "preview-data.html" (dict "url" .url "image" (.image | default "")) .url (.image | default "") -}}
+{{- $title := .title | default $p.host -}}
+{{- $site := .site | default $p.host -}}
+{{- if $p.yt -}}
+  {{- .page.Store.Set "hasVideo" true -}}
+  {{- $href := printf "https://www.youtube.com/watch?v=%s" $p.yt -}}
+  {{- if $p.start }}{{ $href = printf "%s&t=%ds" $href $p.start }}{{ end -}}
+<figure class="embed">
+  <a class="yt" href="{{ $href }}" rel="noopener" data-yt="{{ $p.yt }}" data-start="{{ $p.start }}" aria-label="{{ i18n "playVideo" }}: {{ $title }}">
+    {{- with $p.img }}<img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">{{ end }}
+    <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.5 7.7A8.5 8.5 0 0 0 60.5 1.7C55.2.3 34 .3 34 .3s-21.2 0-26.5 1.4A8.5 8.5 0 0 0 1.5 7.7C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6c5.3 1.4 26.5 1.4 26.5 1.4s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z" fill="#212121" fill-opacity=".85"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></span>
+  </a>
+  <figcaption><a href="{{ $href }}" rel="noopener">{{ $title }}</a>, {{ $site }}</figcaption>
+</figure>
+{{- else -}}
+<a class="card" href="{{ .url }}" rel="noopener">
+  {{- with $p.img }}<img class="card-img" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">{{ end }}
+  <span class="card-body">
+    <span class="card-title">{{ $title }}</span>
+    <span class="card-site">{{ $site }}</span>
+  </span>
+</a>
+{{- end -}}

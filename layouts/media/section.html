@@ -11,16 +11,25 @@
 {{- range $year := uniq $years }}
 <section class="year" aria-labelledby="m{{ $year }}">
   <h2 id="m{{ $year }}">{{ $year }}</h2>
-  <ul class="post-list">
+  <ul class="media-list">
     {{- range $items }}
     {{- $d := time.AsTime .date }}
     {{- if eq ($d.Format "2006") $year }}
-    <li class="post-item">
-      <time datetime="{{ $d.Format "2006-01-02" }}">{{ $d | time.Format ":date_medium" }}</time>
+    {{- $p := partialCached "preview-data.html" (dict "url" .url "image" (.image | default "")) .url (.image | default "") }}
+    {{- $isAV := in (slice "tv" "video" "podcast") .type }}
+    <li class="media-item">
+      <a class="thumb" href="{{ .url }}" rel="noopener" tabindex="-1" aria-hidden="true">
+        {{- with $p.img }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy">
+        {{- else }}
+        <span class="thumb-empty">{{ .outlet }}</span>
+        {{- end }}
+        {{- if $isAV }}<span class="thumb-play"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>{{ end }}
+      </a>
       <div class="post-item-body">
         <a class="post-title" href="{{ .url }}" rel="noopener" lang="{{ .lang }}" hreflang="{{ .lang }}">{{ .title }}</a>
         <span class="post-cat">
-          {{- .outlet }}, {{ i18n (printf "type_%s" .type) }}
+          <time datetime="{{ $d.Format "2006-01-02" }}">{{ $d | time.Format ":date_medium" }}</time>, {{ .outlet }}, {{ i18n (printf "type_%s" .type) }}
           {{- with .start }}, {{ i18n "segment" }} {{ . }}{{ end }}
           {{- if and .start .stop }}–{{ .stop }}{{ end }}
           {{- if ne .lang site.Language.Lang }} ({{ i18n (printf "in_%s" .lang) }}){{ end -}}

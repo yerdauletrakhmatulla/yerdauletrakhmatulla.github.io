@@ -8,6 +8,7 @@ categories: ["archive"]
 description: "2024 жылғы Ядролық сынақтарға қарсы іс-қимылдың халықаралық күнінде Қазақстан, Кирибати және Маршалл аралдарының жастары Астанада 12 тармақтан тұратын декларация қабылдады."
 source: "https://astanatimes.com/2024/09/youth-activists-gather-in-astana-channel-expertise-influence-for-world-free-of-nuclear-weapons/"
 sourceName: "The Astana Times"
+sourceTitle: "Youth Activists Gather in Astana, Channel Expertise, Influence for World Free of Nuclear Weapons"
 draft: true
 ---
 

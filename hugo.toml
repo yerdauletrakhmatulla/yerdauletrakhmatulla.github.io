@@ -17,6 +17,11 @@ buildDrafts = true
     kk = "Ердәулет Рахматулла"
     ru = "Ердаулет Рахматулла"
 
+# Link previews (Media page, posts) are fetched when the site is built and kept for 30 days.
+[caches.getresource]
+  dir = ":cacheDir/:project"
+  maxAge = "720h"
+
 [taxonomies]
   category = "categories"
 

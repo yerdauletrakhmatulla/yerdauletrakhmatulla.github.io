@@ -1,0 +1,197 @@
+# Publications, statements and talks. One list serves all three languages.
+# kind: reports | conference | articles | statements | talks
+# date + precision: precision is day, month (default) or year; for month/year use the 1st.
+# title / publisher stay in the original language. lang: language of the title (default en).
+# role (optional): lecturer | panellist | speaker | presenter
+# note (optional): short note in en / ru / kk
+# links (optional): extra links; use `key` + `name` for a translated label, or `label` for a fixed one.
+
+# Reports and research papers
+- kind: reports
+  date: "2026-07-02"
+  precision: month
+  title: "From Harm to Justice: A Needs-Based Assessment of Nuclear-Affected Communities in Kazakhstan and Policy Pathways for Implementing Articles 6 and 7 of the TPNW"
+  publisher: "Qazaq Nuclear Frontline Coalition (ASQAQ-QNFC), with support from ICAN"
+  url: "https://qazaqnuclearfrontlinecoalition.com/from-harm-to-justice"
+  note:
+    en: "Co-authored with Aigerim Seitenova"
+    ru: "В соавторстве с Айгерим Сейтеновой"
+    kk: "Айгерім Сейтеновамен бірлесіп жазылған"
+
+- kind: reports
+  date: "2026-03-14"
+  title: "Assembling Peace Through Dialogue"
+  publisher: "BASIC, RECNA (Nagasaki University) and PCU Nagasaki Council"
+  url: "https://basicint.org/report-assembling-peace-through-dialogue/"
+  note:
+    en: "Contribution to Working Group 2 (pp. 21–29)"
+    ru: "Раздел Рабочей группы 2 (с. 21–29)"
+    kk: "2-жұмыс тобының бөлімі (21–29 б.)"
+
+- kind: reports
+  date: "2025-03-03"
+  title: "Working paper submitted by the Qazaq Nuclear Frontline Coalition (TPNW/MSP/2025/NGO/23)"
+  publisher: "Third Meeting of States Parties to the Treaty on the Prohibition of Nuclear Weapons"
+  url: "https://docs-library.unoda.org/Treaty_on_the_Prohibition_of_Nuclear_Weapons_-ThirdMeeting_of_States_Parties_(2025)/TPNW_MSP_2025_NGO_23_Qazaq_Nuclear_Frontline_Coalition.pdf"
+
+- kind: reports
+  date: "2025-03-01"
+  title: "Former Nuclear Test Sites: Possible Approaches to Address the Legacy of Testing Programs"
+  publisher: "CTBTO Youth Group, Research Fellowship papers"
+  url: "https://youthgroup.ctbto.org/node/2687"
+
+- kind: reports
+  date: "2025-01-01"
+  precision: year
+  title: "AI and Democratic Values Index 2025"
+  publisher: "Center for AI and Digital Policy (CAIDP)"
+  url: "https://www.caidp.org/reports/aidv-2025/"
+  note:
+    en: "Chapter on Bangladesh"
+    ru: "Глава о Бангладеш"
+    kk: "Бангладеш туралы тарау"
+
+- kind: reports
+  date: "2024-12-01"
+  title: "Gender and Nuclear Weapons: Measuring the Impact"
+  publisher: "BASIC, Community of Practice report"
+  url: "https://basicint.org/wp-content/uploads/2025/01/Gender-and-Nuclear-Weapons-Measuring-the-Impact.pdf"
+
+- kind: reports
+  date: "2024-05-01"
+  title: "Forging a New Frontier: Strengthening the Humanitarian Impacts Agenda for Inclusive and Effective Non-Proliferation under the NPT"
+  publisher: "BASIC"
+  url: "https://basicint.org/wp-content/uploads/2024/07/Forging-a-New-Frontier.pdf"
+  links:
+    - key: republishedBy
+      name: "Atlantic Forum, Dec 2024"
+      url: "https://www.atlantic-forum.com/our-views/forging-a-new-frontier-strengthening-the-humanitarian-impacts-agenda-for-inclusive-and-effective-non-proliferation-under-the-npt"
+
+# Conference papers
+- kind: conference
+  date: "2025-06-01"
+  title: "Nuclear Colonialism and Resurgence in Central Asia: Civil Society, State Power, and Decolonial Resistance"
+  publisher: "Alva Myrdal Centre for Nuclear Disarmament, Annual Cross-Disciplinary Conference, Uppsala University"
+
+- kind: conference
+  date: "2024-08-01"
+  title: "Empowering the Next Generation: Bridging Scientific Expertise and Nuclear Policy in Central and East Asia's Technologically Evolving Landscape"
+  publisher: "International Youth Nuclear Congress (IYNC 2024), Abu Dhabi"
+  url: "https://iync.org/iync-publishes-the-proceedings-of-iync2024/"
+
+- kind: conference
+  date: "2024-07-01"
+  title: "Evaluating Nuclear Proliferation Risk through Fissile Materials and Nuclear Facilities: A Comparative Case Study of the Turkic World (Kazakhstan, Uzbekistan and Türkiye)"
+  publisher: "KAIST NEREC and the Stanton Foundation, Korea National Diplomatic Academy conference, Seoul"
+
+# Articles and op-eds
+- kind: articles
+  date: "2026-05-27"
+  precision: day
+  title: "Third Time is the Charm: 2026 NPT Review Conference Ends without Consensus, Again"
+  publisher: "The Astana Times"
+  url: "https://astanatimes.com/2026/05/third-time-is-the-%d1%81harm-2026-npt-review-conference-ends-without-consensus-again/"
+
+- kind: articles
+  date: "2026-04-08"
+  precision: day
+  title: "The Dawn of Atomic-AI Anxiety"
+  publisher: "Atomic Anxiety in the New Nuclear Age, University of Glasgow"
+  url: "https://atomicanxiety.com/2026/04/08/the-dawn-of-atomic-ai-anxiety/"
+
+- kind: articles
+  date: "2025-08-15"
+  precision: day
+  title: "Youth Leaders Map the Nuclear–AI–Cyber Nexus and Call for Action"
+  publisher: "UN Office for Disarmament Affairs, Youth4Disarmament"
+  url: "https://www.youth4disarmament.org/news/youth-leaders-map-nuclear-ai-cyber-nexus-and-call-action?language_content_entity=en"
+
+# Statements
+- kind: statements
+  date: "2025-10-17"
+  precision: day
+  title: "Statement on Emerging Technologies"
+  publisher: "UN General Assembly, First Committee, 80th session"
+  url: "https://docs-library.unoda.org/General_Assembly_First_Committee_-Eightieth_session_(2025)/qazac_and_UNOY.pdf"
+  note:
+    en: "Delivered with Ana Palada (UNOY) on behalf of youth-led and allied civil society organisations"
+    ru: "Зачитано вместе с Аной Паладой (UNOY) от имени молодёжных и партнёрских организаций гражданского общества"
+    kk: "Ана Паладамен (UNOY) бірге жастар және серіктес азаматтық қоғам ұйымдары атынан оқылды"
+  links:
+    - key: videoOn
+      name: "UN Web TV"
+      url: "https://webtv.un.org/en/asset/k14/k143uhiwbi"
+
+- kind: statements
+  date: "2025-01-01"
+  precision: year
+  title: "UN Youth4Disarmament Forum Outcome Document: Addressing Nuclear Risks in the Age of Emerging Technologies"
+  publisher: "UN Office for Disarmament Affairs, Youth4Disarmament"
+  url: "https://www.youth4disarmament.org/un-youth4disarmament-forum-outcome-document-addressing-nuclear-risks-age-emerging-technologies"
+
+- kind: statements
+  date: "2024-05-24"
+  precision: day
+  title: "Nuclear Security Delegation for the Future Statement"
+  publisher: "IAEA International Conference on Nuclear Security (ICONS 2024), Vienna"
+  url: "https://www.iaea.org/sites/default/files/24/05/delegation_for_the_future_statement.pdf"
+  note:
+    en: "Presented at the closing plenary"
+    ru: "Представлено на заключительном пленарном заседании"
+    kk: "Қорытынды пленарлық отырыста ұсынылды"
+  links:
+    - label: "IAEA GC(68)/INF/6, Annex 2"
+      url: "https://www.iaea.org/sites/default/files/gc/gc68-inf6.pdf"
+
+# Talks and lectures
+- kind: talks
+  date: "2026-06-01"
+  title: "CTBT Across Generations: Towards a Global Legal Framework to End Nuclear Testing"
+  publisher: "CTBTO and the Institute of International Relations of the Ministry of Foreign Affairs of Turkmenistan, Ashgabat"
+  role: panellist
+
+- kind: talks
+  date: "2026-03-15"
+  precision: day
+  title: "Assembling Peace through Dialogue"
+  publisher: "RECNA (Nagasaki University) and BASIC, Nagasaki"
+  role: presenter
+
+- kind: talks
+  date: "2025-05-14"
+  precision: day
+  title: "Nuclear Survivors: 80 Years of Struggle for Justice"
+  publisher: "Peace Research Institute Frankfurt (PRIF)"
+  url: "https://www.prif.org/en/about-us/news/details/nuclear-survivors-80-years-of-struggle-for-justice-1"
+
+- kind: talks
+  date: "2025-03-02"
+  title: "Vienna Conversation Series"
+  publisher: "UNODA Vienna Office"
+  url: "https://disarmament.unoda.org/en/updates/meropriyatie-venskoy-serii-besed-na-temu-molodezh-kak-agenty-peremen-rasshirenie"
+  role: panellist
+
+- kind: talks
+  date: "2025-03-01"
+  title: "ICAN Campaigner Forum 2025"
+  publisher: "ICAN, New York"
+  url: "https://www.icanw.org/3msp_campaigner_forum"
+
+- kind: talks
+  date: "2024-11-01"
+  title: "Kazakhstan's Nuclear Legacy"
+  publisher: "IPPNW Germany, Berlin"
+  role: lecturer
+
+- kind: talks
+  date: "2024-10-02"
+  title: "Global Media and Information Literacy Week 2024"
+  publisher: "UNESCO, Amman"
+  url: "https://www.unesco.org/en/weeks/media-information-literacy-2024/programme"
+  role: speaker
+
+- kind: talks
+  date: "2024-10-01"
+  title: "Central Asia's Nuclear Dynamics"
+  publisher: "Hankuk University of Foreign Studies, Republic of Korea"
+  role: lecturer

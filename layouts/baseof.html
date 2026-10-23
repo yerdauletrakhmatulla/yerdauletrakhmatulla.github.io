@@ -10,5 +10,22 @@
 {{ block "main" . }}{{ end }}
 </main>
 {{ partial "footer.html" . }}
+{{- if .Store.Get "hasVideo" }}
+<script>
+document.addEventListener("click", function (e) {
+  var a = e.target.closest("a.yt");
+  if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+  e.preventDefault();
+  var f = document.createElement("iframe");
+  var s = +a.dataset.start;
+  f.src = "https://www.youtube-nocookie.com/embed/" + a.dataset.yt + "?autoplay=1&rel=0" + (s ? "&start=" + s : "");
+  f.title = a.getAttribute("aria-label") || "Video";
+  f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+  f.allowFullscreen = true;
+  f.className = "yt-frame";
+  a.replaceWith(f);
+});
+</script>
+{{- end }}
 </body>
 </html>

@@ -1,0 +1,47 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- with .Content }}
+<div class="prose section-intro">{{ . }}</div>
+{{- end }}
+{{- $kinds := slice "reports" "conference" "articles" "statements" "talks" }}
+{{- $all := hugo.Data.publications | default slice }}
+<nav class="filter" aria-label="{{ i18n "pubSections" }}">
+  {{- range $k := $kinds }}
+  {{- if where $all "kind" $k }}<a href="#{{ $k }}">{{ i18n (printf "pub_%s" $k) }}</a>{{ end }}
+  {{- end }}
+</nav>
+{{- range $k := $kinds }}
+{{- with sort (where $all "kind" $k) "date" "desc" }}
+<section class="pubs" id="{{ $k }}" aria-labelledby="{{ $k }}-h">
+  <h2 id="{{ $k }}-h">{{ i18n (printf "pub_%s" $k) }}</h2>
+  <ul class="post-list">
+    {{- range . }}
+    {{- $d := time.AsTime .date }}
+    {{- $prec := .precision | default "month" }}
+    {{- $lang := .lang | default "en" }}
+    <li class="post-item">
+      <time datetime="{{ $d.Format "2006-01-02" }}">
+        {{- if eq $prec "year" }}{{ $d.Format "2006" }}
+        {{- else if eq $prec "day" }}{{ $d | time.Format ":date_medium" }}
+        {{- else }}{{ i18n "monthYear" (dict "M" (i18n (printf "m%d" (int $d.Month))) "Y" ($d.Format "2006")) }}{{ end -}}
+      </time>
+      <div class="post-item-body">
+        {{- if .url }}
+        <a class="post-title" href="{{ .url }}" rel="noopener" lang="{{ $lang }}" hreflang="{{ $lang }}">{{ .title }}</a>
+        {{- else }}
+        <span class="post-title" lang="{{ $lang }}">{{ .title }}</span>
+        {{- end }}
+        <span class="post-cat">
+          {{- .publisher }}
+          {{- with .role }}, {{ i18n (printf "role_%s" .) }}{{ end }}
+          {{- with .note }}. {{ index . site.Language.Lang }}{{ end }}
+          {{- range .links }}{{ $l := . }}, <a href="{{ $l.url }}" rel="noopener">{{ if $l.key }}{{ i18n $l.key (dict "Name" $l.name) }}{{ else }}{{ $l.label }}{{ end }}</a>{{ end -}}
+        </span>
+      </div>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{- end }}
+{{ end }}
