@@ -1,7 +1,6 @@
 ---
 title: "From Harm to Justice: Қазақстандағы ядролық сынақтардан зардап шеккен қауымдастықтар туралы талдамалық баяндама"
 date: 2026-07-02
-# CHECK: launch date (2 July 2026?).
 slug: from-harm-to-justice
 categories: ["archive"]
 description: "Ердәулет Рахматулла мен Айгерім Сейтенова Қазақстандағы ядролық сынақтардан зардап шеккен қауымдастықтардың қажеттіліктерін бағалады. Баяндаманы ICAN қолдауымен Qazaq Nuclear Frontline Coalition жариялады."

@@ -1,7 +1,6 @@
 ---
 title: "From Harm to Justice: a policy paper on nuclear-affected communities in Kazakhstan"
 date: 2026-07-02
-# CHECK: launch date (2 July 2026?).
 slug: from-harm-to-justice
 categories: ["archive"]
 description: "A needs-based assessment of nuclear-affected communities in Kazakhstan, co-authored by Yerdaulet Rakhmatulla and Aigerim Seitenova and published by the Qazaq Nuclear Frontline Coalition with support from ICAN."

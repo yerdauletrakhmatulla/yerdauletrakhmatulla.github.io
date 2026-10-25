@@ -1,7 +1,6 @@
 ---
 title: "From Harm to Justice: аналитический доклад о сообществах Казахстана, пострадавших от ядерных испытаний"
 date: 2026-07-02
-# CHECK: launch date (2 July 2026?).
 slug: from-harm-to-justice
 categories: ["archive"]
 description: "Ердаулет Рахматулла и Айгерим Сейтенова оценили потребности сообществ Казахстана, пострадавших от ядерных испытаний. Доклад выпустила Qazaq Nuclear Frontline Coalition при поддержке ICAN."
