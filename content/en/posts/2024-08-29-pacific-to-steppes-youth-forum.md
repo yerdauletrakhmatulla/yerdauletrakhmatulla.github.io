@@ -8,7 +8,7 @@ source: "https://astanatimes.com/2024/09/youth-activists-gather-in-astana-channe
 sourceName: "The Astana Times"
 sourceImage: "https://astanatimes.com/wp-content/uploads/2024/09/38c8c641-0bd2-449a-8d1a-776f5a165da4.jpeg"
 sourceTitle: "Youth Activists Gather in Astana, Channel Expertise, Influence for World Free of Nuclear Weapons"
-draft: true
+draft: false
 ---
 
 On 29 August 2024, the International Day against Nuclear Tests and the 75th anniversary of the first Soviet nuclear test near Semey, young people from Kazakhstan, Kiribati and the Marshall Islands met in Astana for the youth forum *From the Pacific to the Steppes: Addressing Nuclear Sins and Advancing Nuclear Justice*. It was organised by the Nuclear Age Peace Foundation (NAPF), the Steppe Organization for Peace (STOP), which Yerdaulet Rakhmatulla co-founded, and the Friedrich Ebert Foundation in Kazakhstan.

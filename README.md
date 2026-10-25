@@ -46,7 +46,7 @@ Personal website of Yerdaulet Rakhmatulla in English, Russian and Kazakh. Built 
 
 ## Launch checklist
 
-The site starts in **review mode**: drafts are shown with a "Draft" badge, and search engines are asked not to index it. To launch:
+The site went live on 25 October 2026. To return to **review mode** (drafts shown with a "Draft" badge, search engines asked not to index), reverse step 1. The launch steps were:
 
 1. In `hugo.toml`, set `buildDrafts = false` and, under `[params]`, `noindex = false`.
 2. Set `draft: false` on each post you approve.

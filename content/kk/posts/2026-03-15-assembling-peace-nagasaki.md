@@ -7,7 +7,7 @@ description: "Ердәулет Рахматулла RECNA мен BASIC-тің «
 source: "https://basicint.org/report-assembling-peace-through-dialogue/"
 sourceName: "BASIC"
 sourceTitle: "Assembling Peace Through Dialogue (есеп)"
-draft: true
+draft: false
 ---
 
 2026 жылғы 15 наурызда Ердәулет Рахматулла Нагасакиде зерттеу нәтижелерін таныстырды. Ашық гибридті іс-шараны Нагасаки университетінің Ядролық қаруды жою жөніндегі зерттеу орталығы (RECNA) мен Британ-Америка қауіпсіздік жөніндегі ақпараттық кеңесі (BASIC) бірлесіп өткізді. Ол Хиросима мен Нагасакиге атом бомбасы тасталғанына 80 жыл толуына арналған Assembling Peace through Dialogue жобасын қорытындылады. Жобаны PCU Nagasaki Council for Nuclear Weapons Abolition қолдады.

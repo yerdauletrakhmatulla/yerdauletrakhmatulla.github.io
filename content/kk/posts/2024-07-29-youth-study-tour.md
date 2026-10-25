@@ -7,7 +7,7 @@ description: "Қазақстан мен Германиядан келген 20 �
 source: "https://astanatimes.com/2024/07/young-changemakers-advocate-for-nuclear-free-future-through-educational-journey-in-kazakhstan/"
 sourceName: "The Astana Times"
 sourceTitle: "Young Changemakers Advocate for Nuclear-Free Future through Educational Journey in Kazakhstan"
-draft: true
+draft: false
 ---
 
 2024 жылы Қазақстан мен Германиядан келген жиырма жас бір апта бойы Қазақстанды аралады. Олар елдің ядролық өткенімен және оның адамдардың бүгінгі өміріне әсерімен танысты. Сапарды Ердәулет Рахматулла Фридрих Эберт қорының Қазақстандағы өкілдігімен, ICAN Germany және Steppe Organization for Peace (STOP) жастар бастамасымен бірге ұйымдастырды.

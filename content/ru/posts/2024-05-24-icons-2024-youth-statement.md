@@ -7,7 +7,7 @@ description: "Ердаулет Рахматулла вошёл в число 24 
 source: "https://www.iaea.org/sites/default/files/24/05/delegation_for_the_future_statement.pdf"
 sourceName: "МАГАТЭ"
 sourceTitle: "Nuclear Security Delegation for the Future Statement"
-draft: true
+draft: false
 ---
 
 В мае 2024 года Международное агентство по атомной энергии (МАГАТЭ) провело в Вене Международную конференцию по физической ядерной безопасности (ICONS 2024). Неделя открылась двухдневным министерским сегментом. В работе конференции участвовали министры, официальные лица и эксперты из государств-членов Агентства.

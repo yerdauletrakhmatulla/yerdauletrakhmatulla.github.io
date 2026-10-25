@@ -7,7 +7,7 @@ description: "Ердәулет Рахматулла ICONS 2024 конферен�
 source: "https://www.iaea.org/sites/default/files/24/05/delegation_for_the_future_statement.pdf"
 sourceName: "МАГАТЭ"
 sourceTitle: "Nuclear Security Delegation for the Future Statement"
-draft: true
+draft: false
 ---
 
 2024 жылғы мамырда Атом энергиясы жөніндегі халықаралық агенттік (МАГАТЭ) Венада Ядролық физикалық қауіпсіздік жөніндегі халықаралық конференция (ICONS 2024) өткізді. Апта екі күндік министрлер сегментімен ашылды. Конференцияға Агенттікке мүше мемлекеттердің министрлері, лауазымды тұлғалары мен сарапшылары қатысты.

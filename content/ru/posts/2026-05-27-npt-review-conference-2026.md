@@ -7,7 +7,7 @@ description: "Ердаулет Рахматулла участвовал в Об
 source: "https://astanatimes.com/2026/05/third-time-is-the-%d1%81harm-2026-npt-review-conference-ends-without-consensus-again/"
 sourceName: "The Astana Times"
 sourceTitle: "Third Time is the Charm: 2026 NPT Review Conference Ends without Consensus, Again"
-draft: true
+draft: false
 ---
 
 С конца апреля по 22 мая 2026 года в Центральных учреждениях ООН в Нью-Йорке шла Одиннадцатая конференция участников Договора о нераспространении ядерного оружия (ДНЯО) по рассмотрению действия Договора. Ердаулет Рахматулла участвовал в ней как молодёжный делегат по приглашению Управления ООН по вопросам разоружения (УВР ООН) и освещал конференцию в социальных сетях как молодёжный корреспондент.

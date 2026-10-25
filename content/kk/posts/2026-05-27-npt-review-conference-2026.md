@@ -7,7 +7,7 @@ description: "Ердәулет Рахматулла ЯҚТШ-ның 2026 жыл�
 source: "https://astanatimes.com/2026/05/third-time-is-the-%d1%81harm-2026-npt-review-conference-ends-without-consensus-again/"
 sourceName: "The Astana Times"
 sourceTitle: "Third Time is the Charm: 2026 NPT Review Conference Ends without Consensus, Again"
-draft: true
+draft: false
 ---
 
 2026 жылғы сәуірдің соңынан 22 мамырға дейін Нью-Йорктегі БҰҰ штаб-пәтерінде Ядролық қаруды таратпау туралы шартқа (ЯҚТШ) қатысушы мемлекеттердің он бірінші шолу конференциясы өтті. Ердәулет Рахматулла оған БҰҰ-ның Қарусыздану мәселелері жөніндегі басқармасының (UNODA) шақыруымен жастар делегаты ретінде қатысып, конференцияны әлеуметтік желілерде жастар тілшісі ретінде жариялап отырды.

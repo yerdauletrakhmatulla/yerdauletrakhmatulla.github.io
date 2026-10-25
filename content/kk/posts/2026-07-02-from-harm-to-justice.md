@@ -8,7 +8,7 @@ source: "https://qazaqnuclearfrontlinecoalition.com/from-harm-to-justice"
 sourceName: "Qazaq Nuclear Frontline Coalition"
 sourceImage: "https://thb.tildacdn.pro/tild6436-3864-4237-a362-363663653437/-/resize/504x/Screenshot_2026-06-2.png"
 sourceTitle: "From Harm to Justice (талдамалық баяндама)"
-draft: true
+draft: false
 ---
 
 1949–1989 жылдары Қазақстанда 400-ден астам ядролық жарылыс жасалып, 1,5 миллионнан астам адам радиоактивті шөгінділердің әсеріне ұшырады. 2026 жылғы шілдеде Qazaq Nuclear Frontline Coalition (ASQAQ-QNFC) осы сынақтардан зардап шеккен қауымдастықтардың қажеттіліктерін бағалайтын *From Harm to Justice* талдамалық баяндамасын жариялады. Баяндаманы Ердәулет Рахматулла мен Айгерім Сейтенова Ядролық қаруды жою жөніндегі халықаралық науқанның (ICAN) қолдауымен жазды, ал редакциясы мен дизайнын Nuclear Truth Project әзірледі.

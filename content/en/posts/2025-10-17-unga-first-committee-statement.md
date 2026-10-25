@@ -7,7 +7,7 @@ description: "Yerdaulet Rakhmatulla and Ana Palada delivered the first statement
 source: "https://docs-library.unoda.org/General_Assembly_First_Committee_-Eightieth_session_(2025)/qazac_and_UNOY.pdf"
 sourceName: "UNODA"
 sourceTitle: "Statement on Emerging Technologies"
-draft: true
+draft: false
 ---
 
 On 17 October 2025, Yerdaulet Rakhmatulla of the Qazaq Nuclear Frontline Coalition (QNFC) and Ana Palada of the United Network of Young Peacebuilders (UNOY) addressed the UN General Assembly's First Committee on Disarmament and International Security in New York. They delivered the first statement of the UN Youth4Disarmament Forum, on behalf of youth-led and allied civil society organisations. More than 45 individuals and organisations endorsed it.

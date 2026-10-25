@@ -7,7 +7,7 @@ description: "A week-long study tour through Astana, Almaty and Semey for 20 you
 source: "https://astanatimes.com/2024/07/young-changemakers-advocate-for-nuclear-free-future-through-educational-journey-in-kazakhstan/"
 sourceName: "The Astana Times"
 sourceTitle: "Young Changemakers Advocate for Nuclear-Free Future through Educational Journey in Kazakhstan"
-draft: true
+draft: false
 ---
 
 In 2024, twenty young people from Kazakhstan and Germany spent a week travelling through Kazakhstan to learn about the country's nuclear past and its consequences today. Yerdaulet Rakhmatulla co-organised the tour with the Friedrich Ebert Foundation in Kazakhstan, ICAN Germany and the Steppe Organization for Peace (STOP).

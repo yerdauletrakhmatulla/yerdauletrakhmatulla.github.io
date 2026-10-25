@@ -7,7 +7,7 @@ description: "Yerdaulet Rakhmatulla presented his working group's findings in Na
 source: "https://basicint.org/report-assembling-peace-through-dialogue/"
 sourceName: "BASIC"
 sourceTitle: "Assembling Peace Through Dialogue (report)"
-draft: true
+draft: false
 ---
 
 On 15 March 2026, Yerdaulet Rakhmatulla presented research findings in Nagasaki at a public hybrid event co-hosted by Nagasaki University's Research Center for Nuclear Weapons Abolition (RECNA) and the British American Security Information Council (BASIC). The event closed Assembling Peace through Dialogue, a project marking the 80th anniversary of the atomic bombings of Hiroshima and Nagasaki, supported by the PCU Nagasaki Council for Nuclear Weapons Abolition.

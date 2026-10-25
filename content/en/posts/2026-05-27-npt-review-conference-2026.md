@@ -7,7 +7,7 @@ description: "Yerdaulet Rakhmatulla took part in the 2026 NPT Review Conference 
 source: "https://astanatimes.com/2026/05/third-time-is-the-%d1%81harm-2026-npt-review-conference-ends-without-consensus-again/"
 sourceName: "The Astana Times"
 sourceTitle: "Third Time is the Charm: 2026 NPT Review Conference Ends without Consensus, Again"
-draft: true
+draft: false
 ---
 
 From late April to 22 May 2026, states parties met at UN Headquarters in New York for the Eleventh Review Conference of the Treaty on the Non-Proliferation of Nuclear Weapons (NPT). Yerdaulet Rakhmatulla took part as a youth delegate at the invitation of the UN Office for Disarmament Affairs (UNODA) and as a social media youth correspondent for the conference.

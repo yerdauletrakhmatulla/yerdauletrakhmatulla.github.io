@@ -8,7 +8,7 @@ source: "https://qazaqnuclearfrontlinecoalition.com/from-harm-to-justice"
 sourceName: "Qazaq Nuclear Frontline Coalition"
 sourceImage: "https://thb.tildacdn.pro/tild6436-3864-4237-a362-363663653437/-/resize/504x/Screenshot_2026-06-2.png"
 sourceTitle: "From Harm to Justice (аналитический доклад)"
-draft: true
+draft: false
 ---
 
 С 1949 по 1989 год в Казахстане было произведено более 400 ядерных взрывов, а воздействию радиоактивных осадков подверглись свыше 1,5 млн человек. В июле 2026 года Qazaq Nuclear Frontline Coalition (ASQAQ-QNFC) выпустила аналитический доклад *From Harm to Justice* с оценкой потребностей сообществ, пострадавших от ядерных испытаний. Доклад написали Ердаулет Рахматулла и Айгерим Сейтенова при поддержке Международной кампании за запрещение ядерного оружия (ICAN), а редактуру и дизайн взял на себя Nuclear Truth Project.

@@ -8,7 +8,7 @@ source: "https://qazaqnuclearfrontlinecoalition.com/from-harm-to-justice"
 sourceName: "Qazaq Nuclear Frontline Coalition"
 sourceImage: "https://thb.tildacdn.pro/tild6436-3864-4237-a362-363663653437/-/resize/504x/Screenshot_2026-06-2.png"
 sourceTitle: "From Harm to Justice (policy paper)"
-draft: true
+draft: false
 ---
 
 Between 1949 and 1989, more than 400 nuclear weapons were detonated in Kazakhstan, and over 1.5 million people were exposed to radioactive fallout. In July 2026, the Qazaq Nuclear Frontline Coalition (ASQAQ-QNFC) published *From Harm to Justice*, a needs-based assessment of nuclear-affected communities in Kazakhstan. Yerdaulet Rakhmatulla co-authored the paper with Aigerim Seitenova, with support from the International Campaign to Abolish Nuclear Weapons (ICAN). The Nuclear Truth Project edited and designed it.

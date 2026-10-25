@@ -7,12 +7,11 @@ enableRobotsTXT = true
 # appear on their date: the site is rebuilt every morning (see .github/workflows/deploy.yml).
 timeZone = "Asia/Almaty"
 
-# REVIEW MODE: drafts are built and search engines are asked not to index the site.
-# AT LAUNCH: set buildDrafts = false here, and noindex = false under [params].
-buildDrafts = true
+# LIVE since 25 Oct 2026. For review mode again: buildDrafts = true, and noindex = true under [params].
+buildDrafts = false
 
 [params]
-  noindex = true
+  noindex = false
   email = "salem@yerdauletrakhmatulla.com"
   linkedin = "https://www.linkedin.com/in/yerdaulet/"
   [params.names]

@@ -7,7 +7,7 @@ description: "Неделя в Астане, Алматы и Семее для 20
 source: "https://astanatimes.com/2024/07/young-changemakers-advocate-for-nuclear-free-future-through-educational-journey-in-kazakhstan/"
 sourceName: "The Astana Times"
 sourceTitle: "Young Changemakers Advocate for Nuclear-Free Future through Educational Journey in Kazakhstan"
-draft: true
+draft: false
 ---
 
 В 2024 году двадцать молодых людей из Казахстана и Германии провели неделю в поездке по Казахстану. Они знакомились с ядерным прошлым страны и с тем, как оно сказывается на людях сегодня. Ердаулет Рахматулла организовал поездку вместе с Фондом Фридриха Эберта в Казахстане, ICAN Germany и молодёжной инициативой Steppe Organization for Peace (STOP).

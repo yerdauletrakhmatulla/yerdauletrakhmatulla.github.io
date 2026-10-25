@@ -8,7 +8,7 @@ source: "https://astanatimes.com/2024/09/youth-activists-gather-in-astana-channe
 sourceName: "The Astana Times"
 sourceImage: "https://astanatimes.com/wp-content/uploads/2024/09/38c8c641-0bd2-449a-8d1a-776f5a165da4.jpeg"
 sourceTitle: "Youth Activists Gather in Astana, Channel Expertise, Influence for World Free of Nuclear Weapons"
-draft: true
+draft: false
 ---
 
 2024 жылғы 29 тамызда, Ядролық сынақтарға қарсы халықаралық іс-қимыл күні және Семей маңындағы алғашқы кеңестік ядролық сынаққа 75 жыл толған күні Астанада *From the Pacific to the Steppes: Addressing Nuclear Sins and Advancing Nuclear Justice* жастар форумы өтті. Оған Қазақстан, Кирибати және Маршалл аралдарының жастары қатысты. Форумды Nuclear Age Peace Foundation (NAPF), Ердәулет Рахматулла бірлесіп құрған Steppe Organization for Peace (STOP) бастамасы және Фридрих Эберт қорының Қазақстандағы өкілдігі ұйымдастырды.

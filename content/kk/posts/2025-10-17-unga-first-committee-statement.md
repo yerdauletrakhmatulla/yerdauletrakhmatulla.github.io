@@ -7,7 +7,7 @@ description: "Ердәулет Рахматулла мен Ана Палада �
 source: "https://docs-library.unoda.org/General_Assembly_First_Committee_-Eightieth_session_(2025)/qazac_and_UNOY.pdf"
 sourceName: "UNODA"
 sourceTitle: "Statement on Emerging Technologies"
-draft: true
+draft: false
 ---
 
 2025 жылғы 17 қазанда Ердәулет Рахматулла (Qazaq Nuclear Frontline Coalition, QNFC) мен Ана Палада (United Network of Young Peacebuilders, UNOY) Нью-Йоркте БҰҰ Бас Ассамблеясының қарусыздану және халықаралық қауіпсіздік мәселелерімен айналысатын Бірінші комитетінде сөз сөйледі. Олар жастар және серіктес азаматтық қоғам ұйымдарының атынан БҰҰ-ның Youth4Disarmament жастар форумының алғашқы мәлімдемесін оқыды. Мәлімдемені 45-тен астам адам мен ұйым қолдады.
