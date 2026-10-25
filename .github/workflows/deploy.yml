@@ -3,6 +3,10 @@ name: Build and publish the site
 on:
   push:
     branches: [main]
+  # Daily rebuild at 09:15 Kazakhstan time (04:15 UTC), so posts dated in the
+  # future go live on their date without anyone pushing a change.
+  schedule:
+    - cron: "15 4 * * *"
   workflow_dispatch:
 
 permissions:

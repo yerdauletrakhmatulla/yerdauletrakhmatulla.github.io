@@ -3,6 +3,9 @@ title = "Yerdaulet Rakhmatulla"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
+# Dates without a time are read as Kazakhstan time. Posts dated in the future
+# appear on their date: the site is rebuilt every morning (see .github/workflows/deploy.yml).
+timeZone = "Asia/Almaty"
 
 # REVIEW MODE: drafts are built and search engines are asked not to index the site.
 # AT LAUNCH: set buildDrafts = false here, and noindex = false under [params].

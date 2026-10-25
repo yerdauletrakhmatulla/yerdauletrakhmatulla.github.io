@@ -4,7 +4,12 @@
 <div class="prose section-intro">{{ . }}</div>
 {{- end }}
 {{- $kinds := slice "reports" "conference" "articles" "statements" "talks" }}
-{{- $all := hugo.Data.publications | default slice }}
+{{- /* Items with show_from appear from that date (the site is rebuilt daily). */ -}}
+{{- $all := slice }}
+{{- range hugo.Data.publications | default slice }}
+{{- if or (not .show_from) (ge now.Unix (time.AsTime .show_from).Unix) }}{{ $all = $all | append . }}{{ end }}
+{{- end }}
+{{- $lang := site.Language.Lang }}
 <nav class="filter" aria-label="{{ i18n "pubSections" }}">
   {{- range $k := $kinds }}
   {{- if where $all "kind" $k }}<a href="#{{ $k }}">{{ i18n (printf "pub_%s" $k) }}</a>{{ end }}
@@ -18,23 +23,26 @@
     {{- range . }}
     {{- $d := time.AsTime .date }}
     {{- $prec := .precision | default "month" }}
-    {{- $lang := .lang | default "en" }}
+    {{- $tlang := .lang | default "en" }}
+    {{- $href := .url }}
+    {{- with .page }}{{ with site.GetPage . }}{{ $href = .RelPermalink }}{{ end }}{{ end }}
+    {{- $pub := .publisher }}{{ if reflect.IsMap $pub }}{{ $pub = index $pub $lang | default (index $pub "en") }}{{ end }}
     <li class="post-item">
       <time datetime="{{ $d.Format "2006-01-02" }}">
         {{- if eq $prec "year" }}{{ $d.Format "2006" }}
-        {{- else if eq $prec "day" }}{{ $d | time.Format ":date_medium" }}
+        {{- else if eq $prec "day" }}{{ partial "list-date.html" $d }}
         {{- else }}{{ i18n "monthYear" (dict "M" (i18n (printf "m%d" (int $d.Month))) "Y" ($d.Format "2006")) }}{{ end -}}
       </time>
       <div class="post-item-body">
-        {{- if .url }}
-        <a class="post-title" href="{{ .url }}" rel="noopener" lang="{{ $lang }}" hreflang="{{ $lang }}">{{ .title }}</a>
+        {{- if $href }}
+        <a class="post-title" href="{{ $href }}"{{ if .url }} rel="noopener"{{ end }} lang="{{ $tlang }}">{{ .title }}</a>
         {{- else }}
-        <span class="post-title" lang="{{ $lang }}">{{ .title }}</span>
+        <span class="post-title" lang="{{ $tlang }}">{{ .title }}</span>
         {{- end }}
         <span class="post-cat">
-          {{- .publisher }}
+          {{- $pub }}
           {{- with .role }}, {{ i18n (printf "role_%s" .) }}{{ end }}
-          {{- with .note }}. {{ index . site.Language.Lang }}{{ end }}
+          {{- with .note }}. {{ index . $lang }}{{ end }}
           {{- range .links }}{{ $l := . }}, <a href="{{ $l.url }}" rel="noopener">{{ if $l.key }}{{ i18n $l.key (dict "Name" $l.name) }}{{ else }}{{ $l.label }}{{ end }}</a>{{ end -}}
         </span>
       </div>

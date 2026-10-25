@@ -1,8 +1,8 @@
 {{- /*
-  A preview card for posts. Input: dict "page" .Page "url" "title" "site" and optional "image".
+  A preview card for posts. Input: dict "page" .Page "url" "title" "site" and optional "image" and "anchor".
   YouTube links become a player that loads YouTube only when the reader presses play.
 */ -}}
-{{- $p := partialCached "preview-data.html" (dict "url" .url "image" (.image | default "")) .url (.image | default "") -}}
+{{- $p := partialCached "preview-data.html" (dict "url" .url "image" (.image | default "") "anchor" (.anchor | default "")) .url (.image | default "") (.anchor | default "") -}}
 {{- $title := .title | default $p.host -}}
 {{- $site := .site | default $p.host -}}
 {{- if $p.yt -}}

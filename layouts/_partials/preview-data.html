@@ -41,21 +41,31 @@
 {{- if strings.HasPrefix $src "//" -}}{{- $src = printf "https:%s" $src -}}
 {{- else if strings.HasPrefix $src "/" -}}{{- $src = printf "%s://%s%s" $u.Scheme $u.Host $src -}}{{- end -}}
 
-{{- /* Fetch and resize the image. */ -}}
-{{- $img := false -}}
+{{- /* Get the image: a file in assets/ (e.g. "images/media/x.jpg") or a web address. */ -}}
+{{- $orig := false -}}
 {{- with $src -}}
-  {{- with try (resources.GetRemote . (dict "headers" (dict "User-Agent" $ua))) -}}
-    {{- with .Err -}}
-      {{- warnf "preview: image not fetched, %s (%s)" $src . -}}
-    {{- else with .Value -}}
-      {{- if and (eq .ResourceType "image") (in (slice "jpeg" "png" "webp" "gif") .MediaType.SubType) -}}
-        {{- with try (.Fill "640x360 Center webp q75") -}}
-          {{- with .Err -}}{{- warnf "preview: image not processed, %s (%s)" $src . -}}{{- else -}}{{- $img = .Value -}}{{- end -}}
-        {{- end -}}
-      {{- else -}}
-        {{- warnf "preview: unusable image type at %s" $src -}}
+  {{- if strings.HasPrefix . "http" -}}
+    {{- with try (resources.GetRemote . (dict "headers" (dict "User-Agent" $ua))) -}}
+      {{- with .Err -}}
+        {{- warnf "preview: image not fetched, %s (%s)" $src . -}}
+      {{- else with .Value -}}
+        {{- $orig = . -}}
       {{- end -}}
     {{- end -}}
+  {{- else -}}
+    {{- with resources.Get . -}}{{- $orig = . -}}{{- else -}}{{- warnf "preview: local image not found, %s" $src -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Resize to 640x360. anchor (optional): Center, Top, Bottom, Left, Right, Smart. */ -}}
+{{- $img := false -}}
+{{- with $orig -}}
+  {{- if and (eq .ResourceType "image") (in (slice "jpeg" "png" "webp" "gif") .MediaType.SubType) -}}
+    {{- with try (.Fill (printf "640x360 %s webp q75" ($.anchor | default "Center"))) -}}
+      {{- with .Err -}}{{- warnf "preview: image not processed, %s (%s)" $src . -}}{{- else -}}{{- $img = .Value -}}{{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- warnf "preview: unusable image type at %s" $src -}}
   {{- end -}}
 {{- end -}}
 

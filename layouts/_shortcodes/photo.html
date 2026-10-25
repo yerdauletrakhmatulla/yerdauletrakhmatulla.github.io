@@ -1,0 +1,14 @@
+{{- /* Usage: {{< photo src="images/posts/x.jpg" alt="What the photo shows" caption="Caption" >}}  (src is a file in assets/) */ -}}
+{{- $src := .Get "src" -}}
+{{- with resources.Get $src -}}
+  {{- $l := .Resize "1280x webp q78" -}}
+  {{- $m := .Resize "720x webp q78" -}}
+<figure class="photo">
+  <img src="{{ $l.RelPermalink }}" srcset="{{ $m.RelPermalink }} 720w, {{ $l.RelPermalink }} 1280w" sizes="(max-width: 42rem) 100vw, 40rem" width="{{ $l.Width }}" height="{{ $l.Height }}" alt="{{ $.Get "alt" }}" loading="lazy">
+  {{- with $.Get "caption" }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>
+{{- else -}}
+  {{- errorf "photo: %q not found in assets/ (%s)" $src $.Position -}}
+{{- end -}}

@@ -4,7 +4,12 @@
 <div class="prose section-intro">{{ . }}</div>
 {{- end }}
 <p class="kit-jump"><a href="#media-kit">{{ i18n "kitJump" }}</a></p>
-{{- $items := sort (hugo.Data.media | default slice) "date" "desc" }}
+{{- /* Items with show_from appear from that date (the site is rebuilt daily). */ -}}
+{{- $items := slice }}
+{{- range hugo.Data.media | default slice }}
+{{- if or (not .show_from) (ge now.Unix (time.AsTime .show_from).Unix) }}{{ $items = $items | append . }}{{ end }}
+{{- end }}
+{{- $items = sort $items "date" "desc" }}
 {{- if $items }}
 {{- $years := slice }}
 {{- range $items }}{{ $years = $years | append ((time.AsTime .date).Format "2006") }}{{ end }}
@@ -15,8 +20,11 @@
     {{- range $items }}
     {{- $d := time.AsTime .date }}
     {{- if eq ($d.Format "2006") $year }}
-    {{- $p := partialCached "preview-data.html" (dict "url" .url "image" (.image | default "")) .url (.image | default "") }}
+    {{- $p := partialCached "preview-data.html" (dict "url" .url "image" (.image | default "") "anchor" (.anchor | default "")) .url (.image | default "") (.anchor | default "") }}
     {{- $isAV := in (slice "tv" "video" "podcast") .type }}
+    {{- /* title is either the original title (a string) or our own description in en/ru/kk */ -}}
+    {{- $title := .title }}{{ $titleLang := .lang }}
+    {{- if reflect.IsMap .title }}{{ $title = index .title site.Language.Lang | default (index .title "en") }}{{ $titleLang = site.Language.Lang }}{{ end }}
     <li class="media-item">
       <a class="thumb" href="{{ .url }}" rel="noopener" tabindex="-1" aria-hidden="true">
         {{- with $p.img }}
@@ -27,9 +35,9 @@
         {{- if $isAV }}<span class="thumb-play"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>{{ end }}
       </a>
       <div class="post-item-body">
-        <a class="post-title" href="{{ .url }}" rel="noopener" lang="{{ .lang }}" hreflang="{{ .lang }}">{{ .title }}</a>
+        <a class="post-title" href="{{ .url }}" rel="noopener" lang="{{ $titleLang }}" hreflang="{{ .lang }}">{{ $title }}</a>
         <span class="post-cat">
-          <time datetime="{{ $d.Format "2006-01-02" }}">{{ $d | time.Format ":date_medium" }}</time>, {{ .outlet }}, {{ i18n (printf "type_%s" .type) }}
+          <time datetime="{{ $d.Format "2006-01-02" }}">{{ partial "list-date.html" $d }}</time>, {{ .outlet }}, {{ i18n (printf "type_%s" .type) }}
           {{- with .start }}, {{ i18n "segment" }} {{ . }}{{ end }}
           {{- if and .start .stop }}–{{ .stop }}{{ end }}
           {{- if ne .lang site.Language.Lang }} ({{ i18n (printf "in_%s" .lang) }}){{ end -}}

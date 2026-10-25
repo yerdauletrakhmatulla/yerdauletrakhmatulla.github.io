@@ -1,0 +1,2 @@
+{{- /* Date for lists. Kazakh uses the full form ("2026 ж. 9 қазан"); the short CLDR form pads the day with a zero. */ -}}
+{{- if eq site.Language.Lang "kk" }}{{ . | time.Format ":date_long" }}{{ else }}{{ . | time.Format ":date_medium" }}{{ end -}}

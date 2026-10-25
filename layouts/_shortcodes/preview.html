@@ -1,2 +1,2 @@
-{{- /* Usage in a post: {{< preview url="https://..." title="Title" site="Outlet" >}}  (title, site and image are optional) */ -}}
-{{ partial "preview-card.html" (dict "page" .Page "url" (.Get "url") "title" (.Get "title") "site" (.Get "site") "image" (.Get "image")) }}
+{{- /* Usage in a post: {{< preview url="https://..." title="Title" site="Outlet" >}}  (title, site, image and anchor are optional) */ -}}
+{{ partial "preview-card.html" (dict "page" .Page "url" (.Get "url") "title" (.Get "title") "site" (.Get "site") "image" (.Get "image") "anchor" (.Get "anchor")) }}

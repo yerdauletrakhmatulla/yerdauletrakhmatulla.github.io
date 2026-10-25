@@ -1,31 +1,47 @@
 # Media appearances: interviews, podcast episodes, TV commentary, videos, press features.
-# One list serves all three languages. Keep `title` in the item's original language
-# and set `lang` to that language (en, ru or kk).
+# One list serves all three languages.
+# title: the original title (a string), or, when we describe the item ourselves, a map with en / ru / kk.
+# lang: language of the item itself (en, ru or kk).
 # type: interview | podcast | tv | video | feature
 #   feature = press coverage that quotes or profiles him (not a one-on-one interview)
+# image (optional): preview image, a file in assets/ (e.g. images/media/x.jpg) or a web address.
+#   Without it, the page's own preview image is used (YouTube thumbnail or og:image).
+# anchor (optional): which part of the image to keep when cropping: Center, Top, Bottom, Left, Right.
 # start / stop (optional): where the segment starts and ends in a long programme.
+# show_from (optional): date from which the item appears.
 # The page sorts by date, newest first.
 
 - date: "2026-10-09"
   type: tv
-  title: "Live commentary on the CIS summit in Turkmenistan"
+  title:
+    en: "Live commentary on the CIS summit in Turkmenistan"
+    ru: "Комментарий в прямом эфире о саммите СНГ в Туркменистане"
+    kk: "Түрікменстандағы ТМД саммиті туралы тікелей эфирдегі пікір"
   outlet: "AnewZ"
   url: "https://www.youtube.com/watch?v=EvsUCXZk_tE&t=2003s"
+  image: "images/media/anewz-2026-10-cis-summit.jpg"
   start: "33:23"
   stop: "41:20"
   lang: en
 
 - date: "2026-09-29"
   type: tv
-  title: "Live commentary on President Tokayev's official visit to Germany"
+  title:
+    en: "Live commentary on President Tokayev's official visit to Germany"
+    ru: "Комментарий в прямом эфире об официальном визите Президента Токаева в Германию"
+    kk: "Президент Тоқаевтың Германияға ресми сапары туралы тікелей эфирдегі пікір"
   outlet: "AnewZ"
   url: "https://www.youtube.com/watch?v=zv8RjNDFXvA&t=2610s"
+  image: "images/media/anewz-2026-09-tokayev-germany.jpg"
   start: "43:30"
   lang: en
 
 - date: "2026-09-09"
   type: interview
-  title: "The Central Asian Nuclear-Weapon-Free Zone at 20"
+  title:
+    en: "The Central Asian Nuclear-Weapon-Free Zone at 20"
+    ru: "Зоне, свободной от ядерного оружия, в Центральной Азии 20 лет"
+    kk: "Орталық Азиядағы ядролық қарудан азат аймаққа 20 жыл"
   outlet: "AnewZ Prime Time"
   url: "https://www.linkedin.com/posts/yerdaulet_primetime-nuclearweaponfreezone-ugcPost-7504132932496891904-kYts/"
   lang: en
@@ -63,6 +79,8 @@
   title: "Kazakh Youth Find Their Voice for Nuclear Justice at the UN"
   outlet: "The Diplomat"
   url: "https://thediplomat.com/2025/03/kazakh-youth-find-their-voice-for-nuclear-justice-at-the-un/"
+  image: "images/media/diplomat-2025-03-nuclear-truth-project.jpg"
+  anchor: Top
   lang: en
 
 - date: "2024-09-26"
@@ -77,8 +95,8 @@
   title: "Youth Activists Gather in Astana, Channel Expertise, Influence for World Free of Nuclear Weapons"
   outlet: "The Astana Times"
   url: "https://astanatimes.com/2024/09/youth-activists-gather-in-astana-channel-expertise-influence-for-world-free-of-nuclear-weapons/"
-  lang: en
   image: "https://astanatimes.com/wp-content/uploads/2024/09/38c8c641-0bd2-449a-8d1a-776f5a165da4.jpeg"
+  lang: en
 
 - date: "2024-08-29"
   type: video
