@@ -6,7 +6,8 @@ on:
   # Daily rebuild at 09:15 Kazakhstan time (04:15 UTC), so posts dated in the
   # future go live on their date without anyone pushing a change.
   schedule:
-    - cron: "15 4 * * *"
+    - cron: "15 4 * * *"   # 09:15 Almaty
+    - cron: "45 8 * * *"   # 13:45 Almaty, backup in case GitHub skips the morning run
   workflow_dispatch:
 
 permissions:
