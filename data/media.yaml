@@ -11,6 +11,19 @@
 # show_from (optional): date from which the item appears.
 # The page sorts by date, newest first.
 
+- date: "2026-10-29"
+  type: tv
+  title:
+    en: "Live commentary on why Central Asia declines foreign military bases"
+    ru: "Комментарий в прямом эфире о том, почему Центральная Азия отказывается от иностранных военных баз"
+    kk: "Орталық Азияның шетелдік әскери базалардан неге бас тартатыны туралы тікелей эфирдегі пікір"
+  outlet: "AnewZ"
+  url: "https://www.youtube.com/watch?v=_0GiRdGFMOA&t=2070s"
+  image: "images/media/anewz-2026-10-western-bases.jpg"
+  start: "34:30"
+  stop: "42:40"
+  lang: en
+
 - date: "2026-10-09"
   type: tv
   title:
