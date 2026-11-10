@@ -11,6 +11,19 @@
 # show_from (optional): date from which the item appears.
 # The page sorts by date, newest first.
 
+- date: "2026-11-10"
+  type: tv
+  title:
+    en: "Live commentary on the ADB study on Central Asia's investment potential"
+    ru: "Комментарий в прямом эфире об исследовании АБР об инвестиционном потенциале Центральной Азии"
+    kk: "Азия даму банкінің Орталық Азияның инвестициялық әлеуеті туралы зерттеуі жөніндегі тікелей эфирдегі пікір"
+  outlet: "AnewZ"
+  url: "https://www.youtube.com/watch?v=4kpDjgftcmk&t=1810s"
+  image: "images/media/anewz-2026-11-adb-investment-outlook.jpg"
+  start: "30:10"
+  stop: "41:11"
+  lang: en
+
 - date: "2026-11-05"
   type: tv
   title:
