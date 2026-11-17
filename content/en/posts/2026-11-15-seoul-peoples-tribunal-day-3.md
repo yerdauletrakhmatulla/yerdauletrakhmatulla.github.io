@@ -1,5 +1,5 @@
 ---
-title: "Yerdaulet Rakhmatulla attends the final day of the 2026 Seoul International People's Tribunal on the 1945 US Atomic Bombings"
+title: "Yerdaulet Rakhmatulla Attends the 2026 Seoul International People's Tribunal on the 1945 US Atomic Bombings"
 date: 2026-11-15
 slug: seoul-peoples-tribunal-2026
 categories: ["updates"]
